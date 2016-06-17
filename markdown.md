@@ -1,10 +1,7 @@
-Markdown leren schrijven
+Markdown schrijven
 ========================
 
-Dit document legt uit wat Markdown is en hoe je het gebruikt. De tekst is zelf volledig met Markdown opgemaakt. Je kan ze dus ook als voorbeeld lezen. 
-
-Versie 1: geschreven op 17 juni 2016 door Kristof Michiels. 
-
+Dit document legt uit wat Markdown is en hoe je het gebruikt. De tekst is zelf volledig met Markdown opgemaakt. Dit is versie 1, geschreven door Kristof Michiels op 17 juni 2016.
 
 Wat is Markdown?
 ----------------
@@ -12,7 +9,8 @@ Wat is Markdown?
 Markdown is een set opmaak-notaties die je in een teksteditor (bvb. Atom) aan je documenten toevoegt om de tekst vorm te geven. Markdown is heel snel te leren en ontworpen om gemakkelijk geschreven te kunnen worden. De notaties zijn helder en logisch en hinderen de leesbaarheid van de tekst niet. Je van Markdown voorziene tekst kan automatisch omgezet worden naar een hele reeks andere formaten (zoals pdf of html).  
 Markdown is ontwikkeld door John Gruber in 2004. Er bestaan verschillende versies van Markdown. De meesten voegen extra notaties toe, maar de basisfunctionaliteit is in elke variant dezelfde.
 
-Hieronder een voorbeeld van hoe je Markdown schrijft. Helemaal niet moeilijk zoals je ziet. Het wijst zichzelf eigenlijk uit. 
+Hieronder een voorbeeld van hoe eenvoudig je Markdown kan schrijven. 
+
 ```
 Mijn titel
 ==========
@@ -20,9 +18,9 @@ Mijn titel
 Hier komt een paragraaf met **benadrukking** in de tekst.
 Deze tekst maakt deel uit van mijn paragraaf.
 
-* You know why, David? 
-* Because of the kids. 
-* They called me Mr Glass.
+- Dit is een lijstelement
+- Dit is ook een lijstelement
+- Dit tenslotte is ook een lijstelement
 ```
 
 ### Waarom zou je het gebruiken?
@@ -63,7 +61,7 @@ Hier komt een titel van het tweede niveau
 -----------------------------------------
 ```
 
-Op de tweede manier kan je elke van de 6 mogelijke html-stijlen voor hoofdingen beschrijven. Je laat je titel onmiddellijk voorafgaan door één of meerdere hashtags (#), eentje voor elk niveau dat je wenst aan te geven. Voor een titel van niveau drie zal je drie hasthtags gebruiken. Witruimte tussen de hastag(s) en de titeltekst is optioneel.
+Op de tweede manier kan je elke van de 6 mogelijke html-stijlen voor hoofdingen beschrijven. Je laat je titel onmiddellijk voorafgaan door één of meerdere hashtags (#), eentje voor elk niveau dat je wenst aan te geven. Voor een titel van niveau drie zal je drie hasthtags gebruiken. Witruimte tussen de hastag(s) en de titeltekst mogen maar zijn niet verplicht.
 
 ```
 # Een titel van het eerste niveau 
@@ -76,25 +74,28 @@ Op de tweede manier kan je elke van de 6 mogelijke html-stijlen voor hoofdingen 
 Kies zelf welke manier jouw voorkeur wegdraagt. Ikzelf werk met onderlijning voor de eerste niveau's. Vanaf niveau drie werk ik dan met hastags.
 
 
-### Lijsten
+### Lijstjes maken
 
-If you guessed how to make lists in Markdown, you'd almost certainly be right. Both bulleted and numbered lists are supported. Bulleted lists can start with either hyphens, asterisks, or plus signs, and you can mix those if you want to.
-- This is item one - This is item two
-Numbered lists, unsurprisingly, use numbers – and remember to put a period after them.
-1. This is item one. 2. This is item two.
-You'll also need at least one space after the list marker (the hyphen or asterisk or plus sign for unordered lists, or the number and period for ordered lists). The actual numbers you use for numbered lists don't matter; if you convert your Markdown document to HTML, the lists will start at 1, and increase by 1 each time.
-Lists have a couple of interesting properties, compared to other block elements. Firstly, while you'll normally start them at the left margin (the beginning of the line), you can add up to three spaces before each item if you so desire, to make the lists look indented in your Markdown document.
-Secondly, if you leave blank lines between each list item, when your Markdown is converted to HTML, you'll get a paragraph (P) tag around each item, but you won't if there are no blank lines between each one. Whether that's useful is up to you.
-Lastly, you can have multiple paragraphs of text within a list item: all you need to do is make sure that each subsequent paragraph of a list item is indented by four space, or one tab.
+Zowel bullet-lijsten als genummerde lijsten zijn mogelijk. Bullet-lijsten maak je met streepjes, sterretjes, plus-tekens, gevolgd door minstens één spatie. Aan jou de keuze. Ik doe het hier met streepjes:
 
-- This is item one, paragraph one.
-And this is the second paragraph of item one.
-- This is item two.
-Once again, just do what seems intuitive for a plain text file, and it'll usually show up just as you expect.
+```
+- Dit is een element
+- Dit is ook een element
+- Ik ben het derde element
+```
+
+Bij genummerde lijsten gebruik je cijfers met daarachter telkens een punt en minstens één spatie:
+
+```
+1. Dit is element 1
+2. Dit is element 2
+3. En dit is element 3
+```
+Als je een witregel open laat tussen elk lijstelement, dan zal in html elk lijstelement in een paragraaf worden gewikkeld.
 
 ### Horizontale lijnen
 
-To visually split up sections of a document, there's nothing quite as satisfying as a horizontal line – like the HR tag in HTML. Markdown lets you create horizontal lines using three or more hyphens, asterisks, or underscores, on their own line.
+Een horizontale lijn voeg je toe door drie of meer strepen, sterretjes of underscores op een eigen regel te plaatsen. Deze tekens mogen (maar niet verplicht) gescheiden zijn door een spatie.
 
 * * *
 - - - - - -

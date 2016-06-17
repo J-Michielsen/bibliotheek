@@ -9,59 +9,72 @@ Versie 1: geschreven op 17 juni 2016 door Kristof Michiels.
 Wat is Markdown?
 ----------------
 
-Markdown is een verzameling van opmaakcodes die je aan je tekstdocumenten kan toevoegen. Je kan het gebruiken om teksten te schrijven in een teksteditor (zoals Atom). Markdown is ontworpen om gemakkelijk geschreven én gelezen te kunnen worden. Eens geschreven kan je van Markdown voorziene tekst gemakkelijk omgezet worden in een hele reeks 
+Markdown is een set opmaak-notaties die je in een teksteditor (bvb. Atom) aan je documenten toevoegt om de tekst vorm te geven. Markdown is heel snel te leren en ontworpen om gemakkelijk geschreven te kunnen worden. De notaties zijn helder en logisch en hinderen de leesbaarheid van de tekst niet. Je van Markdown voorziene tekst kan automatisch omgezet worden naar een hele reeks andere formaten (zoals pdf of html).  
+Markdown is ontwikkeld door John Gruber in 2004. Er bestaan verschillende versies van Markdown. De meesten voegen extra notaties toe, maar de basisfunctionaliteit is in elke variant dezelfde.
 
-### Wat kan Markdown voor jou betekenen? 
+Hieronder een voorbeeld van hoe je Markdown schrijft. Helemaal niet moeilijk zoals je ziet. Het wijst zichzelf eigenlijk uit. 
+```
+Mijn titel
+==========
 
-1. An easy-to-learn plain text formatting syntax, and:
-2. A tool to convert that text into various rich formats, particularly HTML.
-lets you use plain text formatting conventions that you've probably already seen a hundred times – and perhaps even use yourself – to make documents that are not only clean and readable as-is, but which can also be readily converted into HTML and other rich formats.
-Markdown is logical, simple, and uses just a few punctuation symbols to format text. It's based, in part, on how people tend to format plain text emails, and its overriding goal is to be readable at all times.
-Markdown was created by John Gruber, and the first release was in 2004. There's no single definitive standard for Markdown (besides John's), but for the most part, everything is compatible. There are various versions of Markdown out there, many of which add new features, but the core functionality is the same everywhere.
-If you've ever wanted to keep your writing (whether it's articles, documentation, blog posts, or anything else) in a plain-text, portable format, but also be able to convert it when needed to richly-styled HTML, Markdown is for you.
+Hier komt een paragraaf met **benadrukking** in de tekst.
+Deze tekst maakt deel uit van mijn paragraaf.
+
+* You know why, David? 
+* Because of the kids. 
+* They called me Mr Glass.
+```
 
 ### Waarom zou je het gebruiken?
 
-lets you write in a way that's readable and natural, regardless of the tools available to you at the time. Markdown files are just text files, so they're easily portable and usable as they are – but they can also readily be converted to a rich format like HTML.
-Markdown is widely supported in blogging systems (including WordPress, Movable Type, Jekyll, and more), and most modern text and code editors support it too.
-More to the point, you've probably already used Markdown, without being aware of it. If you've ever emphasised something *like this*, you've used Markdown. If you've ever made a list by starting each line with a hyphen, or asterisk (or a number), you've used Markdown. If you've ever made a horizontal line using a series of asterisks or hyphens, you've used Markdown.
-That's the real beauty of it: Markdown uses common, plain-text shorthand that most of us are already familiar with, and lets you do new things with it. Whether you're writing a shopping list, a blog post, documentation for your code or designs, or even a whole book, Markdown can help.
+Met Markdown houd je al je documenten in een draagbare simpele tekstvorm. Je kan er alles mee schrijven, gaande van een shopping lijstje tot een blogpost, documentatie voor je code of designs, tot zelfs hele boeken. 
+Je kan het -zoals ik hier - gebruiken om rechtstreeks teksten te publiceren op GitHub of op blogsystemen zoals WordPress of Jekyll. 
+
+Veel platformen en tools laten je toe te werken met Markdown. Atom heeft zeer goede ondersteuning voor het schrijven met Markdown. 
+
+Een goeie online tool om snel mee van start te kunnen gaan is stackedit.io. Surf naar http://stackedit.io en je kan onmiddellijk Markdown in je browser beginnen te schrijven.
 
 De basis: vaak voorkomende Markdown syntax
 ------------------------------------------
 
 ### Paragrafen
 
-Komen van alle elementen eigelijk het vaakst voor. Ze hebben dan ook geen enkele bijzondere formatting nodig. they're just one or more consecutive lines of text, just like in an email, or any plain text file. Blank lines separate paragraphs, and you can use any number of blank lines together. (Blank here means "looks blank": lines full of just whitespace are considered to be blank, just like totally empty lines.)
-f you want to hard-wrap your paragraphs (i.e. have line-breaks in them), go right ahead; Markdown ignores line-breaks within paragraphs, just like web browsers do when interpreting HTML to render web pages.
-If you do want to force an actual line-break, just make sure that the line ends with two or more spaces – in Markdown's HTML output, they'll be converted into a line-break (BR) tag.
-  
-Dit is de eerste paragraaf. We kunnen hem zo lang maken als we zelf willen. Er is geen enkele Markdown formatting nodig.
+Paragrafen komen van alle elementen het vaakst voor en hebben in Markdown geen enkele bijzondere formatting nodig. Je schrijft gewoon je paragraaf en laat deze voorafgaan en eindigen op een lege lijn. Indien je ergens in je paragraaf tekst op een nieuwe regel wil doen beginnen dan laat je de regel erboven eindigen op minstens twee spaties.
+
+```
+Dit is de eerste paragraaf. We kunnen hem zo lang maken als we zelf willen.   
+Deze regel staat op een nieuwe lijn omdat ik de vorige zin heb laten eindigen op 2 spaties.
 
 En dit is een tweede paragraaf.
+```
 
 ### Hoofdingen
 
-Any document needs headings, and HTML provides for six main levels of them. Markdown supports headings using two different kinds of syntax, which you can mix-and-match freely.
-The first kind is the underlined, or setext-style heading. To create one, you take a new line after the actual text of your heading, and then "underline" it by typing either a series of equals- signs (for first-level headings), or hyphens (for second-level) at the start of the line.
+Markdown ondersteunt hoofdingen op verschillende manieren, met twee soorten van opmaakcodes. Je kan deze zonder problemen door elkaar gebruiken. 
+
+Bij de eerste manier ga je onder je hoofding op een nieuwe regel met gelijk-aan-tekens (=) voor een onderlijning zorgen. Je maakt op deze manier je belangrijkste titel aan. Je titels van het tweede niveau doe je op dezelfde manier maar je gebruikt bij je onderlijning streepjes (-).  
+Hier zie je een voorbeeld:
 
 ```
-This is a first-level heading 
-=============================
+Hier komt de belangrijkste titel
+================================
 
-This is a second-level heading 
-------------------------------
+Hier komt een titel van het tweede niveau 
+-----------------------------------------
 ```
 
-You can use any number of underlining characters, as long as there's at least one.
-The second style lets you specify all six possible heading levels used by HTML. It's the
-prefixed, or atx-style heading. To create one, you put one or more consecutive hash symbols immediately before the text of your heading, at the start of the same line. The number of hash symbols determines the heading level.
+Op de tweede manier kan je elke van de 6 mogelijke html-stijlen voor hoofdingen beschrijven. Je laat je titel onmiddellijk voorafgaan door één of meerdere hashtags (#), eentje voor elk niveau dat je wenst aan te geven. Voor een titel van niveau drie zal je drie hasthtags gebruiken. Witruimte tussen de hastag(s) en de titeltekst is optioneel.
 
-# This is a first-level heading
-### This is a third-level heading
+```
+# Een titel van het eerste niveau 
 
-Whitespace between the hash symbols and the heading's text is optional, like so much in Markdown. Use whichever style suits you best.
-If you're using prefixed headings, feel free to also put any number of hash-symbols after the heading's text, on the same line: they'll be ignored, and stripped out if you convert your Markdown document to HTML. Some people prefer the visual balance of having them on both sides, but only the initial ones (before the text) determine the heading level.
+## Een titel van het tweede niveau
+
+### Een titel van het derde niveau
+```
+
+Kies zelf welke manier jouw voorkeur wegdraagt. Ikzelf werk met onderlijning voor de eerste niveau's. Vanaf niveau drie werk ik dan met hastags.
+
 
 ### Lijsten
 

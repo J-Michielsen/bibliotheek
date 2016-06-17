@@ -6,6 +6,8 @@ Dit document legt uit wat Markdown is en hoe je het gebruikt. Het is zelf volled
 Wat is Markdown?
 ----------------
 
+Markdown is een tekstformat waarmee je documenten kan maken.
+
 ### Wat kan Markdown voor jou betekenen? 
 
 1. An easy-to-learn plain text formatting syntax, and:
@@ -40,11 +42,13 @@ En dit is een tweede paragraaf.
 Any document needs headings, and HTML provides for six main levels of them. Markdown supports headings using two different kinds of syntax, which you can mix-and-match freely.
 The first kind is the underlined, or setext-style heading. To create one, you take a new line after the actual text of your heading, and then "underline" it by typing either a series of equals- signs (for first-level headings), or hyphens (for second-level) at the start of the line.
 
+```
 This is a first-level heading 
 =============================
 
 This is a second-level heading 
 ------------------------------
+```
 
 You can use any number of underlining characters, as long as there's at least one.
 The second style lets you specify all six possible heading levels used by HTML. It's the
@@ -160,3 +164,14 @@ De meer geavanceerde zaken
 With the basics of Markdown in hand, you're ready to create documents of just about any kind. For those interested in getting their hands dirty with more advanced usage scenarios, this chapter will touch on some slightly more esoteric topics.
 
 ...
+
+### Literals and escaping
+
+### Using HTML alongside Markdown
+
+### Code
+
+If you're a programmer, you may want to include code in your documents. HTML provides two tags that are useful in this scenario – PRE and CODE – and Markdown has a handy shorthand to use them for code samples. Simply indent each line of code by at least four spaces, or one tab.
+This is a normal paragraph.
+And this is a code block.
+

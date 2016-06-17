@@ -1,20 +1,18 @@
-Markdown schrijven
-========================
+# Markdown schrijven
 
 Dit document legt uit wat Markdown is en hoe je het gebruikt. De tekst is zelf volledig met Markdown opgemaakt. Dit is versie 1, geschreven door Kristof Michiels op 17 juni 2016.
 
-Wat is Markdown?
-----------------
+## Wat is Markdown?
 
 Markdown is een set opmaak-notaties die je in een teksteditor (bvb. Atom) aan je documenten toevoegt om de tekst vorm te geven. Markdown is heel snel te leren en ontworpen om gemakkelijk geschreven te kunnen worden. De notaties zijn helder en logisch en hinderen de leesbaarheid van de tekst niet. Je van Markdown voorziene tekst kan automatisch omgezet worden naar een hele reeks andere formaten (zoals pdf of html).  
 
 Markdown is ontwikkeld door John Gruber in 2004. Er bestaan verschillende versies van Markdown. De meesten voegen extra notaties toe, maar de basisfunctionaliteit is in elke variant dezelfde.
+** 1. John Gruber's Markdown syntax reference. This is the master reference, for the original set of Markdown syntax. It's concise, and is useful as a quick refresher for anyone writing with Markdown.**
 
 Hieronder een voorbeeld van hoe eenvoudig je Markdown kan schrijven. 
 
 ```
-Mijn titel
-==========
+# Mijn titel
 
 Hier komt een paragraaf met **benadrukking** in de tekst.
 Deze tekst maakt deel uit van mijn paragraaf.
@@ -33,8 +31,7 @@ Veel platformen en tools laten je toe te werken met Markdown. Atom heeft zeer go
 
 Een goeie online tool om snel mee van start te kunnen gaan is stackedit.io. Surf naar http://stackedit.io en je kan onmiddellijk Markdown in je browser beginnen te schrijven.
 
-De basis: vaak voorkomende Markdown syntax
-------------------------------------------
+## De basis: vaak voorkomende Markdown syntax
 
 ### Paragrafen
 
@@ -72,7 +69,9 @@ Op de tweede manier kan je elke van de 6 mogelijke html-stijlen voor hoofdingen 
 ### Een titel van het derde niveau
 ```
 
-Kies zelf welke manier jouw voorkeur wegdraagt. Ikzelf werk met onderlijning voor de eerste niveau's. Vanaf niveau drie werk ik dan met hastags.
+Kies zelf welke manier jouw voorkeur wegdraagt.
+
+** Use atx-style headings (i.e. prefixed with hash symbols, not underlined). Leave several blank lines before headings, and at least one blank line afterwards. I tend to use three blank lines before each first-level heading, two before second-level headings, and one before third-level.**
 
 
 ### Lijstjes maken
@@ -94,6 +93,8 @@ Bij genummerde lijsten gebruik je cijfers met daarachter telkens een punt en min
 ```
 Als je een witregel open laat tussen elk lijstelement, dan zal in html elk lijstelement in een paragraaf worden gewikkeld.
 
+**Leave blank lines between list items. This is especially important if you have some long items that wrap onto multiple lines. Without the blank lines between, it's hard to see at a glance where one item ends and the next one begins.**
+
 ### Horizontale lijnen
 
 Een horizontale lijn voeg je toe door drie of meer strepen, sterretjes of underscores op een eigen regel te plaatsen. Deze tekens mogen (maar niet verplicht) gescheiden zijn door een spatie.
@@ -102,6 +103,8 @@ Een horizontale lijn voeg je toe door drie of meer strepen, sterretjes of unders
 * * *
 - - - - - -
 ```
+
+**Leave several blank lines before and after each horizontal rule. I picture them as scene breaks in a book; there should be lots of whitespace to guide the eye.**
 
 ### Blok-aanhalingen
 
@@ -131,6 +134,8 @@ Dit is een voorbeeld van __vetgedrukte benadrukking__
 En dit is ook **een voorbeeld**.
 ```
 
+**Use single underscores for italic emphasis, and double asterisks for boldface. To my eye, underscores always look like a subtle emphasis, and asterisks look "louder", so I find that this style most closely reflects the resulting HTML.**
+
 ### Links
 
 Links kan je in Markdown op verschillende manieren weergeven. De meest voorkomende is inline. De gelinkte tekst staat dan tussen vierkante haakjes, de URL staat tussen haakjes. Je kan indien je dit wenst ook een titel-attribuut koppelen aan de link.
@@ -158,34 +163,61 @@ Bezoek de [kristo.fm][] site om een tutorial op te zoeken
 
 [kristo.fm]: http://kristo.fm/
 ```
+**When using reference-style links, use meaningful labels, and don't rely on the automatic (empty-brackets) labelling feature.**
+
 
 ### Afbeeldingen
 
-Closely related to links, you might also want to include images in your documents. Since Markdown documents are plain text, these are of course references to image
-s, just like the IMG tag in HTML.
+Je kan ook afbeeldingen toevoegen aan je documenten. Deze zijn uiteraard niet zichtbaar in de text-editor, maar uiteraard wel na export naar een ander formaat. De syntax is heel gelijkaardig aan die van links en ook hier zijn er twee varianten (inline en referentie), met twee kleine verschillen: 
+- Om aan te geven dat het om een afbeelding gaat en niet om een link plaats je een uitroepteken voor de vierkante haakjes.
+- De tekst binnen de vierkante haakjes wordt gebruikt als ALT tekst voor de image-tag.
 
-The syntax is practically identical to that for links, including both inline and reference variants, with two small differences:
-• To indicate that you're including an image in the document, instead of just linking to the image, an exclamation-mark (!) is placed before the first set of square brackets.
-• The text inside the square brackets is used as ALT text for the resulting IMG tag, rather than linked text on the web page (since the image itself will be there).
-To embed an image in your document, the syntax is as follows.
-![Photo of a panda](url/to/panda.jpg)
-As with links, you can include an optional title attribute for the image.
-![Photo of a panda](url/to/panda.jpg "Your title here")
-The same applies to reference-style syntax: it's exactly the same as for links, but with the addition of the exclamation-mark before the first set of square brackets.
-![Photo of a panda][panda] [panda]: url/to/panda.jpg
-As with links, optional title attributes can be added to reference-style images too.
+De standaard inline-versie:
 
+```
+![Beschrijving van een foto](url/naar/de/foto.jpg)
 
-De meer geavanceerde zaken
---------------------------
+![Beschrijving van een foto](url/naar/de/foto.jpg "Je titel komt hier")
+```
 
-With the basics of Markdown in hand, you're ready to create documents of just about any kind. For those interested in getting their hands dirty with more advanced usage scenarios, this chapter will touch on some slightly more esoteric topics.
+De referentie-versie:
+
+```
+![Beschrijving van een foto][foto] 
 
 ...
 
+[foto]: url/naar/de/foto.jpg
+```
+
+
+## Meer geavanceerde Markdown
+
 ### Literals and escaping
 
+Sometimes, you may want to use characters that have special meaning in Markdown, without them being interpreted when you convert your document to HTML. For example, you might want to literally use underscores around a word or phrase, without getting EM tags. Markdown allows you to use a backslash symbol to escape such characters.
+This will \_not\_ be turned into emphasis.
+Markdown will also automatically escape two particular characters which have special relevance in HTML:
+• < (left angle bracket, which is used to begin HTML tags)
+• & (ampersand, which is used to begin HTML entities)
+
+Usually, if you want to use these characters in an HTML document, you'd have to convert them into suitable HTML entities: "&lt;" and "&amp;" respectively. Markdown takes care of this for you, so that you can use them naturally while you write.
+Note that Markdown is even clever enough to not convert them when you do use them as actual HTML tags or entities respectively, which we'll talk about next.
+
+
+
 ### Using HTML alongside Markdown
+
+Since Markdown documents can be so easily converted to HTML, you may want to use some of your own actual HTML in your documents too. You're entirely free to do so. The only points to be aware of are as follows:
+• Block elements, like DIV or P blocks, should be surrounded by blank lines: at least one blank line before the opening tag, and at least one blank line after the closing tag.
+• The opening and closing tags shouldn't be indented; i.e. they should start at the beginning of the line.
+You're also free to use native HTML instead of Markdown's equivalent syntax at any time – for images, links, horizontal rules, or indeed anything else. You can also use span-level HTML tags within Markdown content, and vice-versa.
+This is a Markdown paragraph, with <em>emphasis</em> in HTML. And <strong>_this_</strong> will be both bold and italic.
+Note that while you can use Markdown syntax within span-level HTML tags, you cannot use it within block-level tags.
+<p>
+In this HTML block, *these asterisks* won't be converted into emphasis.
+</p>
+Any Markdown syntax inside HTML blocks will be ignored, and will show up literally.
 
 ### Code
 
@@ -193,7 +225,62 @@ If you're a programmer, you may want to include code in your documents. HTML pro
 This is a normal paragraph.
 And this is a code block.
 
-GitHub Flavoured Markdown
--------------------------
+You can add further indentation, which is very useful for code listings, and it'll behave as you'd want. Markdown syntax is ignored within code blocks, so you don't need to worry about escaping characters either.
+In some cases, you might also want to mention code within the context of a regular paragraph of text, without having to use a whole separate code block. Markdown uses the "`" (backtick) character for this.
+Type `uptime`, and press Return.
+If you need to include a literal backtick character within an inline code span, you can surround the span in multiple backticks instead of single ones.
+Markdown uses the ``backtick (`)`` character for inline code.
+You can add spaces inside the backtick delimiters if you need to have a literal backtick at the start or end of the code span. As with code blocks, special HTML characters are automatically escaped, and Markdown syntax is ignored.
 
+### Automatische links
+
+Markdown provides a useful feature for when you want to link to a URL, and just use the URL itself as the linked text; this feature is called automatic links. To use it, just surround any URL with angle-brackets, and it'll become a link when your document is converted to HTML.
+You can buy a Mac at <http://www.apple.com>.
+Automatic links also work for email addresses, with or without the "mailto:" protocol.
+
+
+
+## GitHub Flavoured Markdown
+
+John Gruber's original Markdown syntax has been expanded by various others over the years, and there are now several other Markdown converters available, most of them bringing their own new features and options.
+Whether you're using Markdown locally on your computer, or with a blogging system, or as part of an online service like GitHub, it's worth checking which extra features and syntax are available to you. Everything described so far in this book will work with any Markdown system, but you may also have some extra functionality available.
+Many of the alternate Markdown systems (like Kramdown, Redcarpet, Maruku, and Discount, to name but a few) were inspired by an enhanced version of Markdown written in the PHP programming language, called PHP Markdown Extra.
+The various additions offered by PHP Markdown Extra also tend to be available in other, more recent Markdown systems. In this section, I'll give you a brief overview of some of those extra features.
+Firstly, PHP Markdown Extra (et al, which I'll simply call "Extra" from now on) remove the restriction in standard Markdown about using Markdown syntax inside HTML blocks, using an attribute to indicate that Markdown syntax should be converted as usual.
+
+<div markdown="1">
+I can use Markdown-style _emphasis_ here now!
+</div>
+For those wanting to easily apply CSS styles to the HTML generated by Markdown, Extra allows specifying attributes for headers, links, images, and code blocks. The syntax uses curly brackets (braces), and custom attributes are supported too.
+# This is a first-level heading {#main .content lang=en}
+The above contrived example, when converted to HTML using Extra or any Markdown library that supported the same syntax, would produce the following output.
+<h1 id="main" class="content" lang="en">This is a first-level heading</h1>
+Attribute syntax can be used to give finer control over the generated output, without cluttering up your Markdown document with HTML tags.
+If you often include code in your documents, Extra allows you to do so without worrying regular Markdown's requirement to indent each line of code by at least four spaces (or one tab).
+Instead, you just begin and end your code block with a line containing three or more tilde ("~") characters, or backticks ("`"). This is called a fenced code block, because the row of tildes or backticks looks a bit like a fence.
+~~~
+Code goes here ~~~
+You can also optionally specify a CSS class to apply to the resulting CODE tag, in the generated HTML.
+~~~ .ruby
+Code goes here ~~~
+The attributes syntax described previously also works with fenced code blocks; the attribute-list in curly brackets goes after the first fence.
+PHP Markdown Extra's syntax supports creating HTML tables visually in plain text, using the pipe ("|") character, and hyphens. Here's an example table.
+First Name | Last Name -----------|---------- Matt | Gemmell
+Lauren | Gemmell
+
+The resulting HTML table will have a header row with header cells "First Name" and "Last Name", and a table body with two rows of content, as you'd expect. If you prefer, you can start and end each line of the table with a pipe character too.
+You can use regular Markdown syntax within the content of each call of the table, and you can also specify each column's horizontal alignment by adding a colon (":") character in the separator line of hyphens, as shown below.
+First Name | Last Name :----------|---------: Matt | Gemmell
+Lauren | Gemmell
+A colon at the start of a column's separator line will left-align the column (as in the "First Name" column above), and a colon at the end will right-align the column (as in "Last Name"). Use colons both at the start and end to centre-align a column.
+PHP Markdown Extra also provides some features of interest to writers of long and/or technical documents. The first of these is footnotes, which use syntax very like reference-style links.
+This is some text, with a footnote.[^1]
+[^1]: And this is the footnote itself.
+Footnote labels must be unique, and their definitions can be anywhere in the document. Definitions can be as long as you like; subsequent paragraphs should simply be indented by at least four spaces. In HTML output, footnote definitions will be assembled into a list at the end of the document.
+Abbreviations are also supported, using the ABBR tag in HTML. Simply define an abbreviation anywhere in your document, with syntax similar to footnote definitions.
+*[HTML]: Hyper Text Markup Language
+Then whenever you use the term "HTML" anywhere in the document, it will be converted to an ABBR tag.
+<abbr title="Hyper Text Markup Language">HTML</abbr>
+No special syntax is needed to mark abbreviations; the presence of a definition somewhere in the document is sufficient.
+There are a few other minor additions and tweaks to the standard behaviour in PHP Markdown Extra's syntax, compared to regular Markdown; as ever, be sure to read the documentation for the version of Markdown you're using.
 

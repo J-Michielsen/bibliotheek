@@ -1,15 +1,18 @@
+
+
+
 # Markdown schrijven
 
 Dit document legt uit wat Markdown is en hoe je het gebruikt. De tekst is zelf volledig met Markdown opgemaakt. Dit is versie 1, geschreven door Kristof Michiels op 17 juni 2016.
+
 
 ## Wat is Markdown?
 
 Markdown is een set opmaak-notaties die je in een teksteditor (bvb. Atom) aan je documenten toevoegt om de tekst vorm te geven. Markdown is heel snel te leren en ontworpen om gemakkelijk geschreven te kunnen worden. De notaties zijn helder en logisch en hinderen de leesbaarheid van de tekst niet. Je van Markdown voorziene tekst kan automatisch omgezet worden naar een hele reeks andere formaten (zoals pdf of html).  
 
-Markdown is ontwikkeld door John Gruber in 2004. Er bestaan verschillende versies van Markdown. De meesten voegen extra notaties toe, maar de basisfunctionaliteit is in elke variant dezelfde.
-** 1. John Gruber's Markdown syntax reference. This is the master reference, for the original set of Markdown syntax. It's concise, and is useful as a quick refresher for anyone writing with Markdown.**
+Markdown is ontwikkeld door John Gruber in 2004. Op [zijn site](https://daringfireball.net/projects/markdown/) vind je de originele en zeer nuttige referentie van Markdown. In realiteit zijn er in de laatste jaren verschillende versies bijgekomen. De basisfunctionaliteit is in elke variant dezelfde, maar ze voegen allemaal extra notaties toe.
 
-Hieronder een voorbeeld van hoe eenvoudig je Markdown kan schrijven. 
+Hieronder zie je een voorbeeld van hoe eenvoudig Markdown je documenten van opmaak voorziet. 
 
 ```
 # Mijn titel
@@ -31,6 +34,7 @@ Veel platformen en tools laten je toe te werken met Markdown. Atom heeft zeer go
 
 Een goeie online tool om snel mee van start te kunnen gaan is stackedit.io. Surf naar http://stackedit.io en je kan onmiddellijk Markdown in je browser beginnen te schrijven.
 
+
 ## De basis: vaak voorkomende Markdown syntax
 
 ### Paragrafen
@@ -44,7 +48,7 @@ Deze regel staat op een nieuwe lijn omdat ik de vorige zin heb laten eindigen op
 En dit is een tweede paragraaf.
 ```
 
-### Hoofdingen of titels
+### Hoofdingen
 
 Markdown ondersteunt hoofdingen op verschillende manieren, met twee soorten van opmaakcodes. Je kan deze zonder problemen door elkaar gebruiken. 
 
@@ -69,10 +73,7 @@ Op de tweede manier kan je elke van de 6 mogelijke html-stijlen voor hoofdingen 
 ### Een titel van het derde niveau
 ```
 
-Kies zelf welke manier jouw voorkeur wegdraagt.
-
-** Use atx-style headings (i.e. prefixed with hash symbols, not underlined). Leave several blank lines before headings, and at least one blank line afterwards. I tend to use three blank lines before each first-level heading, two before second-level headings, and one before third-level.**
-
+Mijn advies: gebruik uitsluitend de manier met de hashtags. Laat ook minstens één lijn leeg achter elke hoofding. Voor de hoofding is het verstanding bvb drie regels open te laten voor een hoofding van het eerste niveau (één #), twee regels open te laten voor een hoofding van het tweede niveau (2 #'s) en één regel open te laten voor een hoofding van het derde niveau (3 #'s).
 
 ### Lijstjes maken
 
@@ -91,9 +92,7 @@ Bij genummerde lijsten gebruik je cijfers met daarachter telkens een punt en min
 2. Dit is element 2
 3. En dit is element 3
 ```
-Als je een witregel open laat tussen elk lijstelement, dan zal in html elk lijstelement in een paragraaf worden gewikkeld.
-
-**Leave blank lines between list items. This is especially important if you have some long items that wrap onto multiple lines. Without the blank lines between, it's hard to see at a glance where one item ends and the next one begins.**
+Als je een witregel open laat tussen elk lijstelement, dan zal in html elk lijstelement in een paragraaf worden gewikkeld. Het is verstandig dit consequent te doen en steeds een witregel tussen de lijstelementen te laten indien elk lijstelement meerdere regels beslaat.
 
 ### Horizontale lijnen
 
@@ -104,7 +103,7 @@ Een horizontale lijn voeg je toe door drie of meer strepen, sterretjes of unders
 - - - - - -
 ```
 
-**Leave several blank lines before and after each horizontal rule. I picture them as scene breaks in a book; there should be lots of whitespace to guide the eye.**
+Laat minstens twee witregels tussen voor en na een horizontale lijn. Zo blijft de tekst ook als Markdown beter leesbaar.
 
 ### Blok-aanhalingen
 
@@ -134,11 +133,11 @@ Dit is een voorbeeld van __vetgedrukte benadrukking__
 En dit is ook **een voorbeeld**.
 ```
 
-**Use single underscores for italic emphasis, and double asterisks for boldface. To my eye, underscores always look like a subtle emphasis, and asterisks look "louder", so I find that this style most closely reflects the resulting HTML.**
+Een tip: gebruik enkele underscores voor schuingedrukte benadrukkingen en dubbele sterretjes om iets vet te drukken. Dit verhoogt de leesbaarheid van de tekst in de teksteditor.
 
 ### Links
 
-Links kan je in Markdown op verschillende manieren weergeven. De meest voorkomende is inline. De gelinkte tekst staat dan tussen vierkante haakjes, de URL staat tussen haakjes. Je kan indien je dit wenst ook een titel-attribuut koppelen aan de link.
+Links kan je in Markdown op verschillende manieren weergeven. De meest voorkomende zijn inline links. De gelinkte tekst staat hier tussen vierkante haakjes en de URL tussen haakjes. Je kan indien je dit wenst ook een titel-attribuut koppelen aan de link.
 
 ```
 [Mijn website](http://kristo.fm)
@@ -147,24 +146,17 @@ Links kan je in Markdown op verschillende manieren weergeven. De meest voorkomen
 
 ```
 
-Indien je de links wil splitsen (zoals bij een voetnoot eigenlijk) kan je de referentie-manier van noteren in Markdown gebruiken. Je geeft elke link dan een uniek label, tussen een tweede set vierkante haakjes geplaatst. Je moet dan ergens in hetzelfde document ook nog het label beschrijven. De labelbeschrijving zelf verschijnt niet in de tekst. Ook hier kan je optioneel een titel-attribuut toevoegen aan de link.
+Indien je de links wil splitsen en op één plaats oplijsten kan je de referentie-manier van noteren gebruiken. Je geeft elke link dan een uniek label, tussen een tweede set vierkante haakjes geplaatst. Ergens op hetzelfde document (maakt niet uit waar) dien je dan nog het label te beschrijven. Markdown doet dan de rest, want het eindresultaat ziet er hetzelfde uit als met inline links. Ook hier kan je optioneel een titel-attribuut toevoegen aan de link. Zorg in elk geval dat de labels verzorgd en betekenisdragend zijn. Anders wordt het al snel een soep.
 
 ```
 [Kristofs web site][kristofm]
+[AP hogeschool][ap]
 
 ...
 
 [kristofm]: http://kristo.fm/ 
-[kristofm]: http://kristo.fm/ "Thuisplek voor interessante webdesign tutorials"
-
-...
-
-Bezoek de [kristo.fm][] site om een tutorial op te zoeken
-
-[kristo.fm]: http://kristo.fm/
+[ap]: http://www.ap.be "Artesis Plantijn hogeschool Antwerpen"
 ```
-**When using reference-style links, use meaningful labels, and don't rely on the automatic (empty-brackets) labelling feature.**
-
 
 ### Afbeeldingen
 

@@ -1,12 +1,15 @@
 Markdown leren schrijven
 ========================
 
-Dit document legt uit wat Markdown is en hoe je het gebruikt. Het is zelf volledig in Markdown geschreven, je kan het dus ook als voorbeeld gebruiken.
+Dit document legt uit wat Markdown is en hoe je het gebruikt. De tekst is zelf volledig met Markdown opgemaakt. Je kan ze dus ook als voorbeeld lezen. 
+
+Versie 1: geschreven op 17 juni 2016 door Kristof Michiels. 
+
 
 Wat is Markdown?
 ----------------
 
-Markdown is een tekstformat waarmee je documenten kan maken.
+Markdown is een verzameling van opmaakcodes die je aan je tekstdocumenten kan toevoegen. Je kan het gebruiken om teksten te schrijven in een teksteditor (zoals Atom). Markdown is ontworpen om gemakkelijk geschreven én gelezen te kunnen worden. Eens geschreven kan je van Markdown voorziene tekst gemakkelijk omgezet worden in een hele reeks 
 
 ### Wat kan Markdown voor jou betekenen? 
 
@@ -174,4 +177,8 @@ With the basics of Markdown in hand, you're ready to create documents of just ab
 If you're a programmer, you may want to include code in your documents. HTML provides two tags that are useful in this scenario – PRE and CODE – and Markdown has a handy shorthand to use them for code samples. Simply indent each line of code by at least four spaces, or one tab.
 This is a normal paragraph.
 And this is a code block.
+
+GitHub Flavoured Markdown
+-------------------------
+
 

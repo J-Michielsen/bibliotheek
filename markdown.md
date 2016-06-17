@@ -7,6 +7,7 @@ Wat is Markdown?
 ----------------
 
 Markdown is een set opmaak-notaties die je in een teksteditor (bvb. Atom) aan je documenten toevoegt om de tekst vorm te geven. Markdown is heel snel te leren en ontworpen om gemakkelijk geschreven te kunnen worden. De notaties zijn helder en logisch en hinderen de leesbaarheid van de tekst niet. Je van Markdown voorziene tekst kan automatisch omgezet worden naar een hele reeks andere formaten (zoals pdf of html).  
+
 Markdown is ontwikkeld door John Gruber in 2004. Er bestaan verschillende versies van Markdown. De meesten voegen extra notaties toe, maar de basisfunctionaliteit is in elke variant dezelfde.
 
 Hieronder een voorbeeld van hoe eenvoudig je Markdown kan schrijven. 
@@ -46,7 +47,7 @@ Deze regel staat op een nieuwe lijn omdat ik de vorige zin heb laten eindigen op
 En dit is een tweede paragraaf.
 ```
 
-### Hoofdingen
+### Hoofdingen of titels
 
 Markdown ondersteunt hoofdingen op verschillende manieren, met twee soorten van opmaakcodes. Je kan deze zonder problemen door elkaar gebruiken. 
 
@@ -97,66 +98,66 @@ Als je een witregel open laat tussen elk lijstelement, dan zal in html elk lijst
 
 Een horizontale lijn voeg je toe door drie of meer strepen, sterretjes of underscores op een eigen regel te plaatsen. Deze tekens mogen (maar niet verplicht) gescheiden zijn door een spatie.
 
+```
 * * *
 - - - - - -
+```
 
-You can put spaces between the characters if you prefer.
+### Blok-aanhalingen
 
-### Blockquotes
+Aanhalingen of block quotes maak je met een groter-dan-teken (>). Een goeie manier van werken is een groter-dan teken te plaatsen op elke regel, maar je kan je ook beperken tot één per paragraaf.  
 
-If you've ever used plain text email – and I hope you have – then you'll be familiar with the practice of quoting sections of a message in your reply, using the ">" character. Markdown uses exactly the same idea for blockquotes. For the most visually pleasing results, you should put a ">" before every quoted line.
-> This is a blockquote. There's some text here,
-> and some more text here. There's even a bit
-> of additional text just here. >
-> This is the final quoted line of text.
+> Dit is een blok-aanhaling. Sommige tekst staat hier,
+> en andere staat daar. Er staat zelfs een beetje tekst
+> hier.
+> Dit is de laatste lijn met tekst binnen deze aanhaling.
 
-Alternatively, you can just put the ">" before the first line of each quoted paragraph, and
-Markdown will still do the right thing.
-
-> This is a blockquote. There's some text here, and some more text here. There's even a bit
-of additional text just here.
-> This is the final quoted line of text.
-You can use other block elements, like headings, lists, and so on inside a blockquote, and you can even nest one blockquote inside another.
 
 ### Benadrukken
 
-Besides block-level elements, there are also a few common inline elements you may want to add to your document. The first of these is emphasis. There are two sorts of emphasis: the one that most of us would call italics (more properly an EM tag, in HTML), and the one we'd call boldface (a STRONG tag, in HTML).
-To create EM-type emphasis, you simply surround a word or phrase with a pair of single underscores or asterisks.
-This is an example of italic _emphasis_.
-And *so is this*.
-You must begin and end the emphasised section with the same character, but it doesn't matter which one you use. You can mix and match pairs of the same character in the same document, naturally.
-To create STRONG-type emphasis, you use pairs of two underscores or asterisks instead. This is an example of boldface __emphasis__.
-And **so is this**.
-You can even use emphasis in the middle of words, if you like.
+Er zijn twee manieren van benadrukken: schuin of italics en vet of bold. Schuine benadrukking doe je door de tekst tussen enkele underscores of sterretjes te plaatsen.
 
-Absolutely **un**believable
+```
+Dit is een voorbeeld van _schuingedrukte benadrukking_ 
 
-Documents are most readable if you pick one set of characters to use for single-pair (italic) emphasis, and the other set of characters for double-pair (boldface) emphasis – but it's your choice.
+En dit is ook *een voorbeeld*.
+```
+
+Vette benadrukking doe je door een paar van twee underscores of sterretjes te gebruiken.
+
+```
+Dit is een voorbeeld van __vetgedrukte benadrukking__ 
+
+En dit is ook **een voorbeeld**.
+```
 
 ### Links
 
-The next type of non-block element you'll often want to use is links. Markdown lets you write links in a variety of ways, falling into two main categories: inline, and reference. When you convert your Markdown document to HTML, the links will become proper hyperlinks. Links in Markdown are specified using square brackets for the linked text. In the case of inline links, the square-bracketed section is followed by round brackets (parentheses) for the URL.
+Links kan je in Markdown op verschillende manieren weergeven. De meest voorkomende is inline. De gelinkte tekst staat dan tussen vierkante haakjes, de URL staat tussen haakjes. Je kan indien je dit wenst ook een titel-attribuut koppelen aan de link.
 
-[Apple's web site](http://www.apple.com/)
+```
+[Mijn website](http://kristo.fm)
 
-Either relative or absolute URLs are supported. You can also specify an optional title attribute for the resulting link, which most browsers show as a tooltip when the mouse pointer hovers over the link.
+[Mijn website](http://kristo.fm/ "Thuisplek voor interessante webdesign tutorials")
 
-[Apple's web site](http://www.apple.com/ "Buy yourself a Mac")
+```
 
-Inline links are useful, but they're also verbose, and some people feel that they look messy. They also spread URLs throughout your document. If you'd prefer to separate the URLs from the linked text – almost like a footnote – you can instead use the reference style of Markdown links.
-For reference links, instead of the URL in parentheses, you use a second set of square brackets containing a unique label for the URL.
-[Apple's web site][apple]
-You can add a space between the two sets of square brackets if you prefer. You then have to define which URL the label actually refers to, and you can do that anywhere at all in the same document.
-[apple]: http://apple.com/
-Again, you can add an optional title attribute for the link, if you want.
-[apple]: http://apple.com/ "Buy yourself a Mac"
-The optional title attribute can be enclosed in single or double quotes, or even parentheses. You can also optionally enclose the URL in angle brackets ("<" and ">"). You can also put the title attribute on the next line, and indent it, if you feel it's more readable that way.
-The actual label itself is only used to tell Markdown which URL belongs with which link; it won't appear in the resulting HTML. Labels can have spaces, letters, numbers, and punctuation if necessary. They're not case sensitive.
-Lastly, you can use implicit link labels, in reference links. This means that the actual linked text (inside the first set of square brackets) is also used as the label, and the second set of square brackets can thus be left empty.
-Visit the [Apple][] site to buy a Mac.
-[Apple]: http://www.apple.com/
-Markdown's goal is to be readable at all times, and to let you make plain text documents that are as understandable as the HTML versions that they can be converted to. Reference links tend to be much cleaner to read if you have many links interspersed throughout some text.
-As always, you can mix and match all varieties of inline and reference links as you please.
+Indien je de links wil splitsen (zoals bij een voetnoot eigenlijk) kan je de referentie-manier van noteren in Markdown gebruiken. Je geeft elke link dan een uniek label, tussen een tweede set vierkante haakjes geplaatst. Je moet dan ergens in hetzelfde document ook nog het label beschrijven. De labelbeschrijving zelf verschijnt niet in de tekst. Ook hier kan je optioneel een titel-attribuut toevoegen aan de link.
+
+```
+[Kristofs web site][kristofm]
+
+...
+
+[kristofm]: http://kristo.fm/ 
+[kristofm]: http://kristo.fm/ "Thuisplek voor interessante webdesign tutorials"
+
+...
+
+Bezoek de [kristo.fm][] site om een tutorial op te zoeken
+
+[kristo.fm]: http://kristo.fm/
+```
 
 ### Afbeeldingen
 

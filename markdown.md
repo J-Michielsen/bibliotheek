@@ -192,7 +192,7 @@ Markdown zal ook automatisch twee karakters escapen die bijzondere betekenis heb
 
 ### HTML gebruiken binnen Markdown
 
-Je kan zonder problemen HTML mengen in je van Markdown voorziene tekst. Er zijn wel enkele regels. 1) Block level elementen zoals <div> en <p> moeten omgeven zijn door een witregel. Minstens één lege regel voor de openingstag en minstens één witregel na de afsluitende tag. 2) De openingstag en afsluitende tag mogen niet inspringen. Ze moeten m.a.w. op het begin van de regel beginnen.
+Je kan zonder problemen HTML mengen in je van Markdown voorziene tekst. Er zijn wel enkele regels. 1) Blok level elementen zoals \<div\> en \<p\> moeten omgeven zijn door een witregel. Minstens één lege regel voor de openingstag en minstens één witregel na de afsluitende tag. 2) De openingstag en afsluitende tag mogen niet inspringen. Ze moeten m.a.w. op het begin van de regel beginnen.
 Onthou ook dat hoewel je Markdown codes mag gebruiken binnen HTML tags op span-niveau, dit niet het geval is binnen block-niveau tags.
 
 ```
@@ -203,16 +203,20 @@ Binnen deze HTML block, zullen **deze sterretjes** niet benadrukt worden.
 
 ### Code schrijven
 
-Als je programmeert, dan wil je code kunnen toevoegen aan je documenten. HTML voorziet ons hier van twee tags die nuttig zijn, namelijk \<pre\> en \<code\>. and Markdown has a handy shorthand to use them for code samples. Simply indent each line of code by at least four spaces, or one tab.
-This is a normal paragraph.
-And this is a code block.
+Als je programmeert, dan wil je code kunnen toevoegen aan je documenten. HTML voorziet ons hier van twee tags die nuttig zijn, namelijk \<pre\> en \<code\> en Markdown heeft hiervoor een shortcut: spring bij elke lijn code minstens vier spaties in. Nog eenvoudiger: plaats een lijn met 3 "backticks" of "\`" karakters voor én na de code blok en dit blok wordt automatisch als code aanzien. Markdown codes worden volledig genegeerd binnen een code blok.
 
-You can add further indentation, which is very useful for code listings, and it'll behave as you'd want. Markdown syntax is ignored within code blocks, so you don't need to worry about escaping characters either.
-In some cases, you might also want to mention code within the context of a regular paragraph of text, without having to use a whole separate code block. Markdown uses the "`" (backtick) character for this.
-Type `uptime`, and press Return.
-If you need to include a literal backtick character within an inline code span, you can surround the span in multiple backticks instead of single ones.
-Markdown uses the ``backtick (`)`` character for inline code.
-You can add spaces inside the backtick delimiters if you need to have a literal backtick at the start or end of the code span. As with code blocks, special HTML characters are automatically escaped, and Markdown syntax is ignored.
+```
+Dit is een normale paragraaf
+
+    En dit is een code blok
+```
+
+&#96;&#96;&#96;
+Dit wordt een code blok omdat ze omgeven is door telkens 3 backticks
+&#96;&#96;&#96;
+
+
+
 
 ### Automatische links
 

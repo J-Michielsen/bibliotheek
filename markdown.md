@@ -263,8 +263,41 @@ resulteert in het volgende:
 Jawel, GFM zet een url automatisch om in een link. Handig!
 
 
-### Fenced codeblocks
+### Fenced code blocks
 
+Extra handigheden wanneer je code wil beschrijven en tonen. Je vindt de uitleg hier: https://help.github.com/articles/creating-and-highlighting-code-blocks/
+
+     ```
+      function test() {
+     console.log("notice the blank line before this function?");
+      }
+     ```
+
+Wordt: 
+
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
+
+En als je nog de programmeertaal in kwestie meegeeft krijg je zelfs syntax highlighting.
+
+     ```javascript
+      function test() {
+     console.log("notice the blank line before this function?");
+      }
+     ```
+
+Wordt: 
+
+```javascript
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
+
+Schitterend toch, niet?
 
 ### Tabellen
 
@@ -288,10 +321,13 @@ content    | content
 content    | content
 content    | content
 
+Uitlijnen van de cellen doe je op de volgende manier in de lijn onder de hoofding. Deze kolommen zullen respectievelijk links, gecentreerd en rechts uitgelijnd worden. 
 
+```
+...
+:-----------|:------------:|-------------:
+...
+```
 
-Centreren:
------------:|:------------:|-------------:
-
-Link: http://www.tablesgenerator.com/markdown_tables
-
+Handig bij het maken van tabellen: http://www.tablesgenerator.com/markdown_tables
+Voor de volledigheid ook de uitleg van GitHub zelf: https://help.github.com/articles/organizing-information-with-tables/

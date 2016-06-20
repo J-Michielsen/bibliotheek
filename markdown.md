@@ -211,19 +211,21 @@ Dit is een normale paragraaf
     En dit is een code blok
 ```
 
-&#96;&#96;&#96;
-Dit wordt een code blok omdat ze omgeven is door telkens 3 backticks
-&#96;&#96;&#96;
 
-
-
+    ```
+    Dit wordt een code blok omdat ze omgeven is door telkens 3 backticks
+    ```
 
 ### Automatische links
 
-Markdown provides a useful feature for when you want to link to a URL, and just use the URL itself as the linked text; this feature is called automatic links. To use it, just surround any URL with angle-brackets, and it'll become a link when your document is converted to HTML.
-You can buy a Mac at <http://www.apple.com>.
-Automatic links also work for email addresses, with or without the "mailto:" protocol.
+Markdown kan je link automatisch omzetten naar een link als je ze plaatst tussen een "<" en een ">". Werkt ook met een email adres. 
 
+```
+<http://kristo.fm>
+
+Mail me op <me@kristo.fm>
+
+```
 
 
 ## GitHub Flavoured Markdown (GFM)

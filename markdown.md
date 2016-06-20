@@ -107,7 +107,7 @@ Laat minstens twee witregels tussen voor en na een horizontale lijn. Zo blijft d
 
 ### Blok-aanhalingen
 
-Aanhalingen of block quotes maak je met een groter-dan-teken (>). Een goeie manier van werken is een groter-dan teken te plaatsen op elke regel, maar je kan je ook beperken tot één per paragraaf.  
+Aanhalingen of block quotes maak je met een groter-dan-teken (>). Je kan een groter-dan teken te plaatsen op elke regel, maar je kan je evengoed ook beperken tot één per paragraaf. Uiterst eenvoudige manier om bepaalde paragrafen in je tekst te benadrukken.  
 
 > Dit is een blok-aanhaling. Sommige tekst staat hier,
 > en andere staat daar. Er staat zelfs een beetje tekst
@@ -232,10 +232,30 @@ Automatic links also work for email addresses, with or without the "mailto:" pro
 
 
 
-## GitHub Flavoured Markdown
+## GitHub Flavoured Markdown (GFM)
 
-John Gruber's original Markdown syntax has been expanded by various others over the years, and there are now several other Markdown converters available, most of them bringing their own new features and options.
-Whether you're using Markdown locally on your computer, or with a blogging system, or as part of an online service like GitHub, it's worth checking which extra features and syntax are available to you. Everything described so far in this book will work with any Markdown system, but you may also have some extra functionality available.
+Link: https://help.github.com/articles/github-flavored-markdown
+
+Strikethrough ~~stijl~~
+[x] Taaklijsten
+Auto-hotlinking
+Fenced codeblocks
+Tables
+
+Hoofding 1 | Hoofding 2
+-----------|------------
+content    | content
+content    | content
+content    | content
+content    | content
+
+Centreren:
+-----------:|:------------:|-------------:
+
+Link: http://www.tablesgenerator.com/markdown_tables
+
+
+
 Many of the alternate Markdown systems (like Kramdown, Redcarpet, Maruku, and Discount, to name but a few) were inspired by an enhanced version of Markdown written in the PHP programming language, called PHP Markdown Extra.
 The various additions offered by PHP Markdown Extra also tend to be available in other, more recent Markdown systems. In this section, I'll give you a brief overview of some of those extra features.
 Firstly, PHP Markdown Extra (et al, which I'll simply call "Extra" from now on) remove the restriction in standard Markdown about using Markdown syntax inside HTML blocks, using an attribute to indicate that Markdown syntax should be converted as usual.

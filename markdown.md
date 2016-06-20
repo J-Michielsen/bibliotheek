@@ -1,16 +1,21 @@
 
 
-
 # Markdown schrijven
 
-Dit document legt uit wat Markdown is en hoe je het gebruikt. De tekst is zelf volledig met Markdown opgemaakt. Dit is versie 1, geschreven door Kristof Michiels op 17 juni 2016.
+Dit document legt uit wat Markdown is en hoe je het gebruikt. De tekst is zelf volledig met Markdown opgemaakt. Dit is versie 1.0, initieel geschreven door Kristof Michiels op 17 juni 2016.
 
 
 ## Wat is Markdown?
 
-Markdown is een set opmaak-notaties die je in een teksteditor (bvb. Atom) aan je documenten toevoegt om de tekst vorm te geven. Markdown is heel snel te leren en ontworpen om gemakkelijk geschreven te kunnen worden. De notaties zijn helder en logisch en hinderen de leesbaarheid van de tekst niet. Je van Markdown voorziene tekst kan automatisch omgezet worden naar een hele reeks andere formaten (zoals pdf of html).  
+Met Markdown voorzie je je teksten in een mum van tijd van een prachtige opmaak. Je doet dit met behulp van een set opmaak-codes. Markdown is heel snel te leren. De codes zijn helder, logisch en hinderen de leesbaarheid van de tekst niet. Je van Markdown voorziene tekst kan automatisch omgezet worden naar een hele reeks andere formaten (zoals pdf of html).  
 
-Markdown is ontwikkeld door John Gruber in 2004. Op [zijn site](https://daringfireball.net/projects/markdown/) vind je de originele en zeer nuttige referentie van Markdown. In realiteit zijn er in de laatste jaren verschillende versies bijgekomen. De basisfunctionaliteit is in elke variant dezelfde, maar ze voegen allemaal extra notaties toe.
+Met Markdown houd je al je documenten in een draagbare simpele tekstvorm. Je kan er alles mee schrijven, gaande van shopping lijstjes tot blogposts, documentatie voor je code of designs, tot zelfs hele boeken. 
+
+Ik schrijf zo goed als al mijn teksten in Markdown. De tools die ik hiervoor gebruik: de teksteditor Atom of GitHub zelf. Er bestaan op elk platform een groot aantal toepassingen die schrijven in Markdown ondersteunen. Ook blogsystemen als WordPress of Jekyll kunnen overweg met in Markdown geschreven posts of pagina's.  
+
+Een handige tool om te leren werken met Markdown is [StackEdit](https://stackedit.io/). Ik sla mijn geschreven documenten allemaal op in GitHub, zodat ik ze nooit kan kwijtraken en kan delen met de wereld. Deze teksten kunnen eenvoudig worden omgezet in mooie PDFs via [Gitprint](https://gitprint.com).
+
+Markdown is ontwikkeld door John Gruber in 2004. Op [zijn site](https://daringfireball.net/projects/markdown/) vind je de originele en zeer nuttige referentie van Markdown. In realiteit zijn er in de laatste jaren verschillende versies bijgekomen. De basisfunctionaliteit is in elke variant dezelfde, maar ze voegen allemaal extra notaties toe. Ik bespreek straks nog even de extra zaken die je vind in het zogenaamde GitHub flavoured markdown.
 
 Hieronder zie je een voorbeeld van hoe eenvoudig Markdown je documenten van opmaak voorziet. 
 
@@ -25,17 +30,7 @@ Deze tekst maakt deel uit van mijn paragraaf.
 - Dit tenslotte is ook een lijstelement
 ```
 
-### Waarom zou je het gebruiken?
-
-Met Markdown houd je al je documenten in een draagbare simpele tekstvorm. Je kan er alles mee schrijven, gaande van een shopping lijstje tot een blogpost, documentatie voor je code of designs, tot zelfs hele boeken. 
-Je kan het -zoals ik hier - gebruiken om rechtstreeks teksten te publiceren op GitHub of op blogsystemen zoals WordPress of Jekyll. 
-
-Veel platformen en tools laten je toe te werken met Markdown. Atom heeft zeer goede ondersteuning voor het schrijven met Markdown. 
-
-Een goeie online tool om snel mee van start te kunnen gaan is stackedit.io. Surf naar http://stackedit.io en je kan onmiddellijk Markdown in je browser beginnen te schrijven.
-
-
-## De basis: vaak voorkomende Markdown syntax
+## De basis: Markdowns meest gebruikte codes
 
 ### Paragrafen
 
@@ -185,35 +180,30 @@ De referentie-versie:
 
 ## Meer geavanceerde Markdown
 
-### Literals and escaping
+### Markdown-codes letterlijk weergeven, ofte "escaping"
 
-Sometimes, you may want to use characters that have special meaning in Markdown, without them being interpreted when you convert your document to HTML. For example, you might want to literally use underscores around a word or phrase, without getting EM tags. Markdown allows you to use a backslash symbol to escape such characters.
-This will \_not\_ be turned into emphasis.
-Markdown will also automatically escape two particular characters which have special relevance in HTML:
-• < (left angle bracket, which is used to begin HTML tags)
-• & (ampersand, which is used to begin HTML entities)
+Speciale markdown-karakters die je niet geïnterpreteerd wil zien worden kan je letterlijk laten afdrukken door er een "\" voor te plaatsen:
 
-Usually, if you want to use these characters in an HTML document, you'd have to convert them into suitable HTML entities: "&lt;" and "&amp;" respectively. Markdown takes care of this for you, so that you can use them naturally while you write.
-Note that Markdown is even clever enough to not convert them when you do use them as actual HTML tags or entities respectively, which we'll talk about next.
+```
+Deze tekst zal \_niet\_ benadrukt worden.
+```
 
+Markdown zal ook automatisch twee karakters escapen die bijzondere betekenis hebben in HTML: kleiner dan "<" en de ampersand "&". Normaal zou je "<" en ">" moeten schrijven als "&lt;" and "&amp;" om helemaal juist te zijn, maar Markdown is slim genoeg om dit voor jou te regelen.
 
+### HTML gebruiken binnen Markdown
 
-### Using HTML alongside Markdown
+Je kan zonder problemen HTML mengen in je van Markdown voorziene tekst. Er zijn wel enkele regels. 1) Block level elementen zoals <div> en <p> moeten omgeven zijn door een witregel. Minstens één lege regel voor de openingstag en minstens één witregel na de afsluitende tag. 2) De openingstag en afsluitende tag mogen niet inspringen. Ze moeten m.a.w. op het begin van de regel beginnen.
+Onthou ook dat hoewel je Markdown codes mag gebruiken binnen HTML tags op span-niveau, dit niet het geval is binnen block-niveau tags.
 
-Since Markdown documents can be so easily converted to HTML, you may want to use some of your own actual HTML in your documents too. You're entirely free to do so. The only points to be aware of are as follows:
-• Block elements, like DIV or P blocks, should be surrounded by blank lines: at least one blank line before the opening tag, and at least one blank line after the closing tag.
-• The opening and closing tags shouldn't be indented; i.e. they should start at the beginning of the line.
-You're also free to use native HTML instead of Markdown's equivalent syntax at any time – for images, links, horizontal rules, or indeed anything else. You can also use span-level HTML tags within Markdown content, and vice-versa.
-This is a Markdown paragraph, with <em>emphasis</em> in HTML. And <strong>_this_</strong> will be both bold and italic.
-Note that while you can use Markdown syntax within span-level HTML tags, you cannot use it within block-level tags.
+```
 <p>
-In this HTML block, *these asterisks* won't be converted into emphasis.
+Binnen deze HTML block, zullen **deze sterretjes** niet benadrukt worden.
 </p>
-Any Markdown syntax inside HTML blocks will be ignored, and will show up literally.
+```
 
-### Code
+### Code schrijven
 
-If you're a programmer, you may want to include code in your documents. HTML provides two tags that are useful in this scenario – PRE and CODE – and Markdown has a handy shorthand to use them for code samples. Simply indent each line of code by at least four spaces, or one tab.
+Als je programmeert, dan wil je code kunnen toevoegen aan je documenten. HTML voorziet ons hier van twee tags die nuttig zijn, namelijk \<pre\> en \<code\>. and Markdown has a handy shorthand to use them for code samples. Simply indent each line of code by at least four spaces, or one tab.
 This is a normal paragraph.
 And this is a code block.
 

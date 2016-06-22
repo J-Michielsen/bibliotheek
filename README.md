@@ -1,2 +1,2 @@
 # bibliotheek
-Collectie van teksten over technologie
+Collectie van teksten over webtechnologie als docent Artesis Plantijn Hogeschool Antwerpen

@@ -6,6 +6,7 @@
 
 #### Eindcompetenties
 
+```
 2.Creatieve ontwikkeling
 2b.Ontwerp uitwerken
 -kan de kennis van HTML5 en CSS3 aanwenden om concepten creatief en concreet bruikbaar uit te werken
@@ -23,6 +24,7 @@
 -raadpleegt op eigen initiatief verschillende bronnen (print, e-book, video tutorials en internet) inzake HTML5 en CSS3 om problemen op te lossen en de eigen kennis te actualiseren
 4e.Media-uiting beheren
 -kan websites hosten/structureren op een webserver.
+```
 
 #### Leerinhoud
 
@@ -51,6 +53,7 @@ Met behulp van tal van voorbeelden en oefeningen ontwikkelt de student zich tot 
 
 #### Eindcompetenties
 
+```
 2.Creatieve ontwikkeling
 2b.Ontwerp uitwerken
 -kan de kennis van JavaScript, HTML5 en CSS3 aanwenden om concepten, pagina's en web applicaties creatief uit te werken naar de behoeften van een klant
@@ -67,6 +70,7 @@ Met behulp van tal van voorbeelden en oefeningen ontwikkelt de student zich tot 
 -raadpleegt op eigen initiatief verschillende bronnen (print, e-book, videotutorials, forums) inzake JavaScript, HTML5 en CSS3 om problemen op te lossen en kennis te actualiseren
 -hanteert een correcte syntax bij de structurele opbouw in JavaScript, HTML5 en CSS3
 -kan JavaScript en JavaScript libraries installeren en gebruik maken van de beschikbare functionaliteiten
+```
   
 ### Leerinhoud
 
@@ -96,6 +100,7 @@ Met behulp van tal van voorbeelden en oefeningen ontwikkelt de student zich tot 
 
 #### Eindcompetenties
 
+```
 2.Creatieve ontwikkeling
 2b.Ontwerp uitwerken
 -kan de kennis van JavaScript, HTML5 en CSS3 aanwenden om concepten, pagina's en web applicaties creatief én professioneel uit te werken naar de behoeften van een klant
@@ -115,6 +120,7 @@ Met behulp van tal van voorbeelden en oefeningen ontwikkelt de student zich tot 
 4c.Werkproces optimaliseren
 -volgt de actueelste internetbronnen inzake HTML5, CSS3 en JavaScript om problemen op te lossen en de eigen kennis te actualiseren
 -kan JavaScript en JavaScript libraries installeren en gebruik maken van de beschikbare functionaliteiten
+```
 
 #### Leerinhoud
 
@@ -134,6 +140,7 @@ Verdiepen van de kennis voor het structureren (HTML5) en vormgeven (CSS3) voor w
 
 #### Eindcompetenties
 
+```
 2.Creatieve ontwikkeling	
 2b.Ontwerp uitwerken	
 -kan een creatief concept voor een website uitwerken naar de behoeften van een klant binnen de mogelijkheden van een CMS platform, in casu WordPress (5.Professionalisering - 5a.Taakanalyse)
@@ -156,6 +163,7 @@ Verdiepen van de kennis voor het structureren (HTML5) en vormgeven (CSS3) voor w
 -kan een CMS systeem installeren op een webserver en linken met een database 
 4e.Media-uiting beheren	
 -kent basisinstructies van php en MySQL om aanpassingen in een CMS systeem uit te voeren 
+```
 
 #### Leerinhoud
 
@@ -185,6 +193,7 @@ Gevorderde kennis voor het werken met WordPress:
 
 #### Eindcompetenties
 
+```
 3.Technische ontwikkeling 
 3a.Gegevens inventariseren	
 -raadpleegt op eigen initiatief verschillende bronnen (print, e-book, video tutorials en internet) inzake de contructie van webapplicaties om problemen op te lossen en de eigen kennis te actualiseren  (5.Professionalisering - 5a.Taakanalyse)
@@ -195,6 +204,7 @@ Gevorderde kennis voor het werken met WordPress:
 - begrijpt hoe JavaScript ook in de back-end kan worden gebruikt
 3e.Media-uiting realiseren
 - kan JavaScript, JavaScript bibliotheken en frameworks gebruiken voor de ontwikkeling van eenvoudige web applicaties
+```
 
 #### Leerinhoud
 
@@ -217,6 +227,7 @@ Verdiepen van de kennis van het designen en ontwikkelen voor het web met JavaScr
 
 #### Eindcompetenties
 
+```
 1.Technische ontwikkeling 
 1a.Gegevens inventariseren 
 -raadpleegt op eigen initiatief verschillende bronnen (print, e-book, video tutorials en internet) inzake de contructie van webapplicaties om problemen op te lossen en de eigen kennis te actualiseren (5.Professionalisering - 5a.Taakanalyse) 
@@ -232,6 +243,7 @@ Verdiepen van de kennis van het designen en ontwikkelen voor het web met JavaScr
 2a.Werkproces coördineren 
 -kent verschillende mogelijkheden voor de aanmaak van webapps en heeft inzicht in technologieën die kunnen helpen bij het onwikkelingsproces (.git, grunt, collaborative coding platformen, ...) 
 (5.Professionalisering - 5d.Reflectie) 
+```
 
 #### Leerinhoud
 
@@ -254,6 +266,7 @@ Verdiepen van de kennis van het designen en ontwikkelen voor het web met JavaScr
 
 #### Eindcompetenties
 
+```
 1.Strategische ontwikkeling	
 1a.Verkoop faciliteren	
 -ontwerpt en geeft een overtuigende presentatie over het project 
@@ -280,6 +293,7 @@ Verdiepen van de kennis van het designen en ontwikkelen voor het web met JavaScr
 4e.Media-uiting beheren	
 -bepaalt een back-up strategie ten behoeve van het beheer van crossmediaal te gebruiken data
 -voert een back-up strategie uit ten behoeve van het beheer van crossmediaal te gebruiken data
+```
 
 #### Leerinhoud
 
@@ -307,6 +321,7 @@ De student maakt verschillende oefeningen, alsook een groter project.
 
 #### Eindcompetenties
 
+```
 1.Strategische ontwikkeling	
 1a.Verkoop faciliteren	
 -ontwerpt en geeft een overtuigende presentatie over het project (6.Samenwerken - 6b.Mondelinge communicatie)
@@ -331,6 +346,7 @@ De student maakt verschillende oefeningen, alsook een groter project.
 -kent versie controle systemen	(5.Professionalisering - 5d.Taakanalyse)
 4d.Media-uiting implementeren	
 -kan een webapplicatie deployen (5.Professionalisering - 5d.Taakanalyse)
+```
 
 #### Leerinhoud
 

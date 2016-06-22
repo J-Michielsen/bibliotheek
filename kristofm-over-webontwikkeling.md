@@ -49,6 +49,8 @@ Eerst dit: je 3 peilers blijven een interessante asset. Wat voegen we toe? ...
 
 #### MongoDB
 
+#### Angular 2
+
 ## De app-cultuur. 
 
 ### Ontwikkelen voor een veelheid aan toestellen

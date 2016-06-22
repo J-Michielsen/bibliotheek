@@ -7,7 +7,7 @@
 #### Eindcompetenties
 
 ```
-    2.Creatieve ontwikkeling
+2.Creatieve ontwikkeling
 2b.Ontwerp uitwerken
 -kan de kennis van HTML5 en CSS3 aanwenden om concepten creatief en concreet bruikbaar uit te werken
 3.Technische ontwikkeling
@@ -54,7 +54,7 @@ Met behulp van tal van voorbeelden en oefeningen ontwikkelt de student zich tot 
 #### Eindcompetenties
 
 ```
-    2.Creatieve ontwikkeling
+2.Creatieve ontwikkeling
 2b.Ontwerp uitwerken
 -kan de kennis van JavaScript, HTML5 en CSS3 aanwenden om concepten, pagina's en web applicaties creatief uit te werken naar de behoeften van een klant
 3.Technische ontwikkeling
@@ -101,7 +101,7 @@ Met behulp van tal van voorbeelden en oefeningen ontwikkelt de student zich tot 
 #### Eindcompetenties
 
 ```
-    2.Creatieve ontwikkeling
+2.Creatieve ontwikkeling
 2b.Ontwerp uitwerken
 -kan de kennis van JavaScript, HTML5 en CSS3 aanwenden om concepten, pagina's en web applicaties creatief én professioneel uit te werken naar de behoeften van een klant
 3.Technische ontwikkeling
@@ -141,7 +141,7 @@ Verdiepen van de kennis voor het structureren (HTML5) en vormgeven (CSS3) voor w
 #### Eindcompetenties
 
 ```
-    2.Creatieve ontwikkeling	
+2.Creatieve ontwikkeling	
 2b.Ontwerp uitwerken	
 -kan een creatief concept voor een website uitwerken naar de behoeften van een klant binnen de mogelijkheden van een CMS platform, in casu WordPress (5.Professionalisering - 5a.Taakanalyse)
 - kan een eigen design-strategie ontwikkelen binnen de context van een zelf uitgewerkte WordPress-ondersteunde webapplicatie.

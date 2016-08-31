@@ -11,7 +11,7 @@ Elke HTML-tag beschrijft een ander stukje inhoud van het document.
 
 ### Een eenvoudig HTML document
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,32 +24,28 @@ Elke HTML-tag beschrijft een ander stukje inhoud van het document.
 </html>
 ```
 
-The <!DOCTYPE html> declaration defines this document to be HTML5
-The text between <html> and </html> describes an HTML document
-The text between <head> and </head> provides information about the document
-The text between <title> and </title> provides a title for the document
-The text between <body> and </body> describes the visible page content
-The text between <h1> and </h1> describes a heading
-The text between <p> and </p> describes a paragraph
-Using this description, a web browser will display a document with a heading and a paragraph.
+Aan de hand van deze informatie zal de web browser een document tonen met hoofding en een paragraaf
 
+Wat betekenen nu al die tags?
+Met de <!DOCTYPE html> declaratie geef je aan dat het hier een HTML5 document betreft. De declaratie moet op deze plek staan en helpt de browser om de pagina correct te tonen.
+De tekst tussen <html> en </html> beschrijft een HTML document.
+De tekst tussen <head> en </head> geeft informatie over het document.
+De tekst tussen <title> en </title> voorziet het document van een titel.
+De tekst tussen <body> en </body> beschrijft de zichtbare informatie op de pagina.
+De tekst tussen <h1> en </h1> beschrijft een hoofding.
+De tekst tussen <p> en </p> beschrijft een paragraaf.
 
-Only the <body> section (the white area above) is displayed in a browser.
-
-HTML pagina structuur: hier ook iets over zeggen
-
-The <!DOCTYPE> declaration represents the document type, and helps the browser to display a web page correctly.
-
-It must only appear once, at the top of the page (before any HTML tags).
-
-There are different document types. To display a web page correctly, the browser must know both type and version.
-
-The doctype declaration is not case sensitive.
 
 ### Web browsers en HTML versies
 
-The purpose of a web browser (Chrome, IE, Firefox, Safari) is to read HTML documents and display them.
-The browser does not display the HTML tags, but uses them to determine how to display the document:
+Als web designer schrijf je HTML code. Dat is niet wat degene die naar je webpagina surft te zien krijgt. Deze persoon krijgt een visuele interpretatie van die pagina te zien. Wie maakt nu die vertaling van code naar visueel? Dat doet de web browser.
+
+We kennen allemaal Web browsers. Je hebt keuze uit verschillende, afhankelijk je besturingssysteem: Chrome, Internet Explorer, Safari, Firefox. 
+
+Wat doet een web browser? Hij leest en interpreteert een HTML document en toont de interpretatie aan de gebruiker.
+De browser toont dus geen HTML tags, maar gebruikt de tags om het document visueel te kunnen tonen.
+
+Met <!DOCTYPE html> geef je aan dat het hier een HTML5 pagina betreft. Dat is de laatste versie van de opmaaktaal. Hieronder vind je een overzicht van de versies en het jaar dat ze hun intrede hebben gedaan.
 
 HTML	1991
 HTML 2.0	1995

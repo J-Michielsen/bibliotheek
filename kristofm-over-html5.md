@@ -1,27 +1,28 @@
-# HTML5 in een notendop
+# Informatietechnologie 1: HTML5
 
-## Intro
+## Introductie
 
 ### Wat is HTML?
 
-HTML is a markup language for describing web documents (web pages).
-HTML stands for Hyper Text Markup Language
-A markup language is a set of markup tags
-HTML documents are described by HTML tags
-Each HTML tag describes different document content
+HTML staat voor Hyper Text Markup Language.
+HTML is wat we noemen een opmaaktaal. 
+Dat is een verzameling van opmaak-tags - in dit geval HTML-tags - waarmee je web pagina's beschrijft.
+Elke HTML-tag beschrijft een ander stukje inhoud van het document.
 
 ### Een eenvoudig HTML document
 
+```
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-</body>
+  <head>
+    <title>Pagina-titel</title>
+  </head>
+  <body>
+    <h1>Belangrijkste hoofding</h1>
+    <p>Mijn eerste paragraaf.</p>
+  </body>
 </html>
+```
 
 The <!DOCTYPE html> declaration defines this document to be HTML5
 The text between <html> and </html> describes an HTML document

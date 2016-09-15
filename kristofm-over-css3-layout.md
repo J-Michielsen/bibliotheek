@@ -1,3 +1,5 @@
+IT3 - micro-cursus 1: layout
+
 Multi-column layout
 
 This module is the most mature and has the most browser support of all the modules I will cover in this book so is a great place to start our exploration of all that is new in CSS layout.
@@ -28,8 +30,8 @@ Example 1-5. Causing the h1 to span all columns
 Column breaks
 When using multicolumn layout you have control over how columns break. This can be useful where there are elements that you would prefer not to end up wrapped into a new column, or when you want to make sure a certain element always starts a column.
 Example 1-6. Avoiding breaks inside paragraphs and before blockquotes
-.main p { break-inside: avoid; }
-.main blockquote { break-before: avoid; }
+.main p { page-break-inside: avoid; }
+.main blockquote { page-break-before: avoid; }
 Printing and paged media
 The specification states that multicolumn elements should not continue on to the next page. It would be very annoying if you had to read down one column, onto the next page and then back to the first page to start reading at the top of the next column!
 You can also determine how the content behaves when a page break falls in the middle of a paragraph or other element – just as you can control breaks when the content wraps into new columns. The properties avoid- page and avoid-column give you finer control. If you
@@ -38,3 +40,37 @@ are happy for paragraphs to break across columns but not pages, in the example a
 Responsive design
 The multicolumn layout module is useful for responsive design as the specification means that the columns are responsive by default. As we have seen, the column width setting only sets the most desirable width for the column: the browser is left to work out the actual width.
 An image placed inside a column will be constrained by the column width, so the standard method of scaling down an image by using max-width will work within columns. If you do not set max-width: 100% on an image, and the image is wider than the column, then the browser will crop the image. This behaviour is the same for any element within a column that is wider than the current column width.
+
+CSS Flexible Box Layout
+
+The CSS flexible box layout module, commonly referred to as flexbox, gives us a brand new layout mode in CSS – flex layout. It has been designed to make it easier to layout complex applications and webpages. In this section, I take a look at some of the main layout problems flexbox can solve.
+
+Spacing items evenly
+
+Taking a group of items and spacing them along an axis is a task that has traditionally been rather difficult in web design. Floated elements need a width, yet each one might be a different width and getting them all to fit on a single line with equal spacing usually involves some JavaScript.
+Flexbox makes this task easy. In my markup I have a list that contains my navigation.
+
+Had we set the value of justify-content to space-around then the space would have been added
+all around each element equally, meaning that instead of being flush to the outside edges of the container, there would be some space before the first and after the last element.
+
+The simple example above uses some default behaviour of flexbox. The items here have been displayed as a row. This is the default behaviour and is equivalent to setting the property flex-direction to row.
+The flex-direction property can have one of four values: row; row-reverse; column; and column-reverse. These enable you to display the items in a row, or reverse their order in a row; and similarly in a column, or a column with the order reversed.
+Example 2-3: Setting flex-direction
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+Equal height columns
+Another interesting aspect of flexbox is that it enables you to create equal height boxes, even if the content of some boxes is longer than others. The default value of the property align-items is stretch. This stretches each item in the group to the height of the tallest. You can see this in action in our navigation. I've added some text to one of the items making it taller than all of the others, but each item now grows to the height of the tallest item keeping the columns lined up neatly.
+
+The property align-items can also take the following values:
+• flex-start 
+• flex-end
+• center
+• baseline
+• stretch
+To understand how these work you need to realise that flexbox has a concept of two axes: the main axis, along which items flow; and the cross-axis. By setting flex-
+
+

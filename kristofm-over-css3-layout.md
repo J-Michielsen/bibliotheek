@@ -1,5 +1,15 @@
 IT3 - micro-cursus 1: layout
 
+CSS evolve to the increasingly complex language it is today
+
+From the very beginning of CSS, there has been a giant, lay- out-shaped hole at its center.
+table
+float 'clear'
+positioning
+hacking our way to layouts with floats
+Flexbox came first / upending what we think about layout
+Now => grid layout
+
 Multi-column layout
 
 This module is the most mature and has the most browser support of all the modules I will cover in this book so is a great place to start our exploration of all that is new in CSS layout.
@@ -47,30 +57,74 @@ The CSS flexible box layout module, commonly referred to as flexbox, gives us a 
 
 Spacing items evenly
 
-Taking a group of items and spacing them along an axis is a task that has traditionally been rather difficult in web design. Floated elements need a width, yet each one might be a different width and getting them all to fit on a single line with equal spacing usually involves some JavaScript.
-Flexbox makes this task easy. In my markup I have a list that contains my navigation.
+Taking a group of items and spacing them along an axis is a task that has traditionally been rather difficult in web design. Floated elements need a width, yet each one might be a different width and getting them all to fit on a single line with equal spacing usually involves some JavaScript. Flexbox makes this task easy. In my markup I have a list that contains my navigation.
 
-Had we set the value of justify-content to space-around then the space would have been added
-all around each element equally, meaning that instead of being flush to the outside edges of the container, there would be some space before the first and after the last element.
+Had we set the value of justify-content to space-around then the space would have been added all around each element equally, meaning that instead of being flush to the outside edges of the container, there would be some space before the first and after the last element.
 
-The simple example above uses some default behaviour of flexbox. The items here have been displayed as a row. This is the default behaviour and is equivalent to setting the property flex-direction to row.
-The flex-direction property can have one of four values: row; row-reverse; column; and column-reverse. These enable you to display the items in a row, or reverse their order in a row; and similarly in a column, or a column with the order reversed.
-Example 2-3: Setting flex-direction
-nav ul{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-}
+The simple example above uses some default behaviour of flexbox. The items here have been displayed as a row. This is the default behaviour and is equivalent to setting the property flex-direction to row. The flex-direction property can have one of four values: row; row-reverse; column; and column-reverse. These enable you to display the items in a row, or reverse their order in a row; and similarly in a column, or a column with the order reversed. Example 2-3: Setting flex-direction nav ul{ display: flex; justify-content: space-between; flex-direction: row-reverse; }
 
-Equal height columns
-Another interesting aspect of flexbox is that it enables you to create equal height boxes, even if the content of some boxes is longer than others. The default value of the property align-items is stretch. This stretches each item in the group to the height of the tallest. You can see this in action in our navigation. I've added some text to one of the items making it taller than all of the others, but each item now grows to the height of the tallest item keeping the columns lined up neatly.
+Equal height columns Another interesting aspect of flexbox is that it enables you to create equal height boxes, even if the content of some boxes is longer than others. The default value of the property align-items is stretch. This stretches each item in the group to the height of the tallest. You can see this in action in our navigation. I've added some text to one of the items making it taller than all of the others, but each item now grows to the height of the tallest item keeping the columns lined up neatly.
 
-The property align-items can also take the following values:
-• flex-start 
-• flex-end
-• center
-• baseline
-• stretch
-To understand how these work you need to realise that flexbox has a concept of two axes: the main axis, along which items flow; and the cross-axis. By setting flex-
+The property align-items can also take the following values: • flex-start • flex-end • center • baseline • stretch To understand how these work you need to realise that flexbox has a concept of two axes: the main axis, along which items flow; and the cross-axis. By setting flex-
+
+...
+
+
+Grid Layout, kortweg "Grid"
+
+proposal by Microsoft in April 2011
+De kans is bijzonder groot dat Grid Layout de layout methode is waarop we allen hebben gewacht
+defines a two-dimensional grid layout system. Once a grid has been established on a containing element, the children of that element can be placed into slots on a flexible or fixed layout grid. The grid can be redefined using media queries, rendering the source order of the child elements unimportant.
+
+vitally important that we, as developers and designers, get involved early.
+Daarom ook nog niet aangeleerd in jaar 1. Maar dit zal snel veranderen.
+
+First, activate Grid by entering the following line in your browser address bar:
+
+chrome://flags/#enable-experimental-web-platform- features
+
+Then, turn on the Enable Experimental Web Platform Features flag and restart Chrome.
+
+De basics
+
+Een grid definiëren
+
+A grid is defined using a new value of the display property, 
+
+display: grid.
+
+Next, I need to describe what the grid looks like. Grids have rows and columns,
+
+grid-template-rows
+
+grid-template-columns
+
+We can sort this out by deliberately positioning our items on the new grid. T
+
+You just need to specify the line where the content will start and the line where it will end.
+
+GRID TERMINOLOGY
+
+Before going any further, let’s take a few moments to understand some of the terminology used when talking about Grid Layout.
+
+Grid lines
+
+Grid lines make up the grid and can be horizontal or vertical. They can be referred to by number, as I have done so far, but they can also be named.
+
+Grid track
+
+A grid track is the space between two grid lines. It can be either horizontal or vertical.
+
+In the examples shown in FIGs 1.1–1.3, we have grid tracks representing content cells and grid tracks representing gutters. As far as the grid is concerned, these are the same thing. So when positioning using numbered lines, remember that the gutter lines exist and be sure to include them when working out where content starts and ends.
+
+Grid cell
+
+A grid cell—the space between four grid lines—is the smallest possible unit on the grid. Conceptually, it is just like a table cell.
+
+Grid area
+
+A grid area is any area of the grid bound by four grid lines. It can contain a number of grid cells.
+
+
 
 

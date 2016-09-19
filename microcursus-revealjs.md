@@ -44,7 +44,8 @@ In de <section> tag specificeer je de inhoud van de slides. Standaard beweegt ee
     <div class="slides">
         <section>Dit is een horizontale slide</section>
         <section>
-            <section>En dit is een verticale slide</section>
+            <section>En dit is verticale slide 1</section>
+            <section>En dit is verticale slide 2</section>
         </section>
     </div>
 </div>

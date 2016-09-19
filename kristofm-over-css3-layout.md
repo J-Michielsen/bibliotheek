@@ -125,6 +125,65 @@ Grid area
 
 A grid area is any area of the grid bound by four grid lines. It can contain a number of grid cells.
 
+! uitproberen
 
+Grid gutters
+
+The examples in this little book all achieve gutters by way of a grid track that serves as a gutter between tracks used for con- tent. This is a valid approach, and is, in fact, necessary if you want to create a complex grid using different gutter widths.
+
+As I was preparing this book, a grid-column-gap property was added to the Level 1 specification. This property behaves much like column-gap in multiple-column layouts. Also, for Grid we have grid-row-gap to create spacing between rows. These properties have a shorthand of grid-gap, which allows you to specify both row and column gaps at once.
+
+Because grid-column-gap and grid-row-gap were not implemented in any browser at the time of writing—making it into Chrome Canary at the final moment—I have omitted them from my examples. For simple grids, these properties will serve to reduce the amount of CSS required.
+
+Nog iets zeggen over span?
+
+LINE-BASED PLACEMENT WITH NAMED LINES
+Remember: we are naming grid lines, not tracks.
+
+No strange hacks required!
+Grid truly allows us to separate document structure from presentation.
+create dramatically different
+layouts for any viewport or particular use without compromis- ing the document’s structure.
+
+LAYING THINGS OUT ON THE GRID
+
+A THREE-COLUMN LAYOUT USING GRID-TEMPLATE-AREAS
+
+Nested grids and subgrids
+
+Our nested grid in this example is completely independent of the main grid. The container .content is positioned by the main grid, but the child elements are not—they acquire their grid from the way we set up .content.
+
+This means we can’t inherit column widths from the parent, which is a problem if you want to use flexible length units: you’ll find it tricky to get the elements in the nested grid to line up with those in the outer grid.
+
+The specification has a solution for this: the subgrid key- word. If we were to use subgrid, we would use it as a value for the grid property:
+
+.content {
+
+grid: subgrid;
+
+}
+
+This comes in handy particularly when basing our layout on grid systems such as the twelve-column and sixteen-column grids that are currently popular. In most cases, you’ll want the children of nested elements to use the lines of the outer grid rather than implement their own grid.
+
+At the time of writing, however, it looks as if the subgrid keyword will be moved to Level 2 of the specification, and there is currently no browser implementation of this functionality. My concern is that if this doesn’t make it into the specification, authors will flatten their markup structure, removing semantic markup, in order to use Grid.
+
+Note that I used the repeat keyword when setting up this example. This simply saves me from having to write out my gutter and col pattern thirteen times. Between parentheses, I have the number of times that I want the pattern to repeat, followed by the pattern name.
+
+The specification has recently been updated to allow the number of repeats to be auto. This means that a pattern can repeat as many times as the content requires. At the time of writing, this is not implemented in any browser. If it were, then our row pattern could be written as follows:
+
+grid-template-rows:
+
+[row] auto repeat(auto, [gutter] 10px [row] » 60px);
+
+
+CSS GRIDS AND RESPONSIVE DESIGN
+
+IF YOU’VE MADE IT THIS FAR, you probably already have some idea of how useful CSS Grid Layout will be when working with responsive layouts. Proper separation of document source from presentation is something we have aimed for since the early days of CSS. Whenever I’ve been involved in developing a responsive design, though, I’ve always had to make compro- mises between source order and getting the most desirable layouts for each breakpoint. Grid, along with Flexbox, makes this far more straightforward.
+
+To see how, let’s look at some of the things we created in the last chapter, starting with the three-column layout using grid-template-areas (FIG 2.1).
+
+Redefining grid-template-areas with media queries
+
+Once again, I start by setting up all of my grid areas, for both the main grid and the nested grid on the article, with a class called .content.
 
 

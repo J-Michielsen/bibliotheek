@@ -43,26 +43,24 @@ Als je een element wil laten verschijnen doorheen de verschillende kolommen, dan
 
 Bij gebruik van deze techniek heb je ook controle over hoe kolommen in stukken worden gedeeld. Dit kan nuttig zijn in het geval er elementen zijn die je niet halverwege wil gesplitst zien in twee kolommen, of wanneer je zeker wil zijn dat een bepaald element bovenaan staat in een bepaalde kolom. Voorbeelden: 
 
-'''html
+```html
 .main p { page-break-inside: avoid; }
 .main blockquote { page-break-before: avoid; }
 h1 {page-break-before: always;}
-'''
+```
 
 
 Mogelijkheden:
+```
 page-break-before: auto|always|avoid|left|right|initial|inherit;
+page-break-inside: auto|avoid|initial|inherit;
+page-break-after: auto|always|avoid|left|right|initial|inherit;
+```
 
+### Responsive design
 
+Deze techniek is zeer bruikbaar voor responsive design: de kolommen zijn immers responsive uit zichzelf. Ook een afbeelding zal beperkt worden tot de beschikbare breedte van de kolom. Dus de standaardmanier om een afbeelding automatisch flexibel te krijgen zal ook werken binnen kolommen. Indien je niet max-width: 100% zet op de afbeelding zal de browser de afbeelding zelf croppen. Maar dus: best max-width: 100% gebruiken.
 
-Printing and paged media
-The specification states that multicolumn elements should not continue on to the next page. It would be very annoying if you had to read down one column, onto the next page and then back to the first page to start reading at the top of the next column!
-You can also determine how the content behaves when a page break falls in the middle of a paragraph or other element – just as you can control breaks when the content wraps into new columns. The properties avoid- page and avoid-column give you finer control. If you
-
-are happy for paragraphs to break across columns but not pages, in the example above you could use break- inside: avoid-page rather than just avoid.
-Responsive design
-The multicolumn layout module is useful for responsive design as the specification means that the columns are responsive by default. As we have seen, the column width setting only sets the most desirable width for the column: the browser is left to work out the actual width.
-An image placed inside a column will be constrained by the column width, so the standard method of scaling down an image by using max-width will work within columns. If you do not set max-width: 100% on an image, and the image is wider than the column, then the browser will crop the image. This behaviour is the same for any element within a column that is wider than the current column width.
 
 ##Flexible Box Layout
 

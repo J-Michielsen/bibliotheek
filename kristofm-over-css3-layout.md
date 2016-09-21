@@ -1,5 +1,7 @@
 #IT3 - micro-cursus 1: geavanceerde CSS-layouts
 
+Versie 0.1, door Kristof Michiels (21.9.2016); wordt nog verder aangevuld.
+
 We hebben vorig jaar in IT1 pagina's leren layouten met floats en positioning. En heel lang geleden zelfs door gebruik van tables. Niets verkeerd mee, maar eigenlijk waren deze technieken oorspronkelijk niet voor layouting bedoeld. 
 
 CSS is langzamerhand geëvolueerd tot de complexe taal die ze vandaag is. Bovendien zijn de CSS3 specificaties nog volop in beweging. Er zijn ondertussen nieuwe mogelijkheden toegevoegd specifiek bedoeld voor het maken van layouts. 
@@ -38,7 +40,6 @@ De scheidingslijn wordt centraal geplaatst in het midden van de ruimte die door 
 
 Als je een element wil laten verschijnen doorheen de verschillende kolommen, dan kan je dat element de eigenschap column-span de waarde "all" laten geven.
 
-
 ###Column breaks
 
 Bij gebruik van deze techniek heb je ook controle over hoe kolommen in stukken worden gedeeld. Dit kan nuttig zijn in het geval er elementen zijn die je niet halverwege wil gesplitst zien in twee kolommen, of wanneer je zeker wil zijn dat een bepaald element bovenaan staat in een bepaalde kolom. Voorbeelden: 
@@ -61,6 +62,7 @@ page-break-after: auto|always|avoid|left|right|initial|inherit;
 
 Deze techniek is zeer bruikbaar voor responsive design: de kolommen zijn immers responsive uit zichzelf. Ook een afbeelding zal beperkt worden tot de beschikbare breedte van de kolom. Dus de standaardmanier om een afbeelding automatisch flexibel te krijgen zal ook werken binnen kolommen. Indien je niet max-width: 100% zet op de afbeelding zal de browser de afbeelding zelf croppen. Maar dus: best max-width: 100% gebruiken.
 
+Bekijk zeker alle oefeningen op Codepen!
 
 ##Flexible Box Layout
 
@@ -68,12 +70,40 @@ Bij deze techniek wordt over het algemeen gesproken over de flexbox-techniek of 
 
 Een aantal elementen gelijk uitspreiden over de beschikbare ruimte op een bepaalde as is iets dat niet zo eenvoudig op te lossen viel binnen web design. Tot nu toe: floaten met een bepaalde width, maar dit is niet zo simpel. Flexbox maakt dit wel heel eenvoudig oplosbaar. 
 
+Je activeert flexbox met display: flex;
 
-The simple example above uses some default behaviour of flexbox. The items here have been displayed as a row. This is the default behaviour and is equivalent to setting the property flex-direction to row. The flex-direction property can have one of four values: row; row-reverse; column; and column-reverse. These enable you to display the items in a row, or reverse their order in a row; and similarly in a column, or a column with the order reversed. Example 2-3: Setting flex-direction nav ul{ display: flex; justify-content: space-between; flex-direction: row-reverse; }
+Het vb op Codepen toont het standaardgedrag van flexbox. De items worden getoond als een rij. Het is het equivalent van het zetten van de flex-direction eigenschap op "row". Maar dat kan bvb ook "column" zijn.
 
-Equal height columns Another interesting aspect of flexbox is that it enables you to create equal height boxes, even if the content of some boxes is longer than others. The default value of the property align-items is stretch. This stretches each item in the group to the height of the tallest. You can see this in action in our navigation. I've added some text to one of the items making it taller than all of the others, but each item now grows to the height of the tallest item keeping the columns lined up neatly.
+Flexbox laat ook toe de kolommen een gelijke hoogte mee te geven, zelfs al zou de inhoud van één box anders zijn dan die van een andere.
+Dat doe je met de eigenschap align-items. De default waarde hier is "stretch" en daarmee passen alle boxes zich aan aan het grootste formaat.
 
-The property align-items can also take the following values: • flex-start • flex-end • center • baseline • stretch To understand how these work you need to realise that flexbox has a concept of two axes: the main axis, along which items flow; and the cross-axis. By setting flex-
+```html
+nav ul{
+  /* flexbox magie */
+  display: flex;
+  justify-content: space-between;
+  /*justify-content: space-around;*/
+  /*flex-direction: row-reverse;*/
+  /*flex-direction: column;*/
+  /*flex-wrap: wrap;*/
+}
+
+nav li {
+      /* flexbox magie */
+      border: 1px solid red;
+      padding: 10px;
+      /* flex:auto; */
+}
+```
+Mogelijkheden:
+```
+justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit;
+flex-direction: row|row-reverse|column|column-reverse|initial|inherit;
+align-items: stretch|center|flex-start|flex-end|baseline|initial|inherit;
+flex-wrap: nowrap|wrap|wrap-reverse|initial|inherit;
+```
+
+Bekijk goed alle oefeningen op Codepen!
 
 ## Opdracht tegen uiterlijk volgende les! Je werkt hiervoor op codepen.io
 

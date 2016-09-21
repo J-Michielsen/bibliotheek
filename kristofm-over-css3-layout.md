@@ -6,7 +6,7 @@ CSS is langzamerhand geëvolueerd tot de complexe taal die ze vandaag is. Bovend
 
 Wij gaan in de komende lessen 3 van die technieken zien
 - multi-column layout
-- flexbox
+- flexible box layout
 - grid layout
 
 ##Multi-column layout
@@ -43,7 +43,7 @@ Responsive design
 The multicolumn layout module is useful for responsive design as the specification means that the columns are responsive by default. As we have seen, the column width setting only sets the most desirable width for the column: the browser is left to work out the actual width.
 An image placed inside a column will be constrained by the column width, so the standard method of scaling down an image by using max-width will work within columns. If you do not set max-width: 100% on an image, and the image is wider than the column, then the browser will crop the image. This behaviour is the same for any element within a column that is wider than the current column width.
 
-CSS Flexible Box Layout
+##Flexible Box Layout
 
 The CSS flexible box layout module, commonly referred to as flexbox, gives us a brand new layout mode in CSS – flex layout. It has been designed to make it easier to layout complex applications and webpages. In this section, I take a look at some of the main layout problems flexbox can solve.
 

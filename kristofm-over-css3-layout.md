@@ -22,6 +22,15 @@ Deze module is de meest volwassen techniek van de drie modules die ik jullie wil
 
 Multi-column layout maakt het mogelijk om informatie te gaan schikken in kolommen. Dit op dezelfde manier als in bvb een krantenartikel. 
 
+```html
+main { 
+      /* hier gebeurt de magic */
+      column-count: 3;
+      column-gap: 4em;
+      column-rule: 1px dotted #CCC;
+}
+```
+
 ###Column-count en column-width
 
 Je gaat hierbij als volgt te werk: je neemt een container in je document en geeft in CSS aan dat je het wil schikken in kolommen. De browser doet dan de rest. Als je het aantal kolommen aangeeft (column-count) dan zal de browser zelf de breedte van elke kolom uitrekenen zodat deze kolommen perfect passen binnen de container. Als je daarentegen een (optimale) breedte meegeeft (column-width) voor de kolommen dan zal de browser zoveel kolommen gebruiken als mogelijk gegeven de beschikbare breedte.   

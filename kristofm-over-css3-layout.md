@@ -64,17 +64,24 @@ Deze techniek is zeer bruikbaar voor responsive design: de kolommen zijn immers 
 
 ##Flexible Box Layout
 
-The CSS flexible box layout module, commonly referred to as flexbox, gives us a brand new layout mode in CSS – flex layout. It has been designed to make it easier to layout complex applications and webpages. In this section, I take a look at some of the main layout problems flexbox can solve.
+Bij deze techniek wordt over het algemeen gesproken over de flexbox-techniek of kortweg flex. Voornaamste troef van flexbox is het even spreiden van elementen over een beschikbare ruimte.
 
-Spacing items evenly
+Een aantal elementen gelijk uitspreiden over de beschikbare ruimte op een bepaalde as is iets dat niet zo eenvoudig op te lossen viel binnen web design. Tot nu toe: floaten met een bepaalde width, maar dit is niet zo simpel. Flexbox maakt dit wel heel eenvoudig oplosbaar. 
 
-Taking a group of items and spacing them along an axis is a task that has traditionally been rather difficult in web design. Floated elements need a width, yet each one might be a different width and getting them all to fit on a single line with equal spacing usually involves some JavaScript. Flexbox makes this task easy. In my markup I have a list that contains my navigation.
-
-Had we set the value of justify-content to space-around then the space would have been added all around each element equally, meaning that instead of being flush to the outside edges of the container, there would be some space before the first and after the last element.
 
 The simple example above uses some default behaviour of flexbox. The items here have been displayed as a row. This is the default behaviour and is equivalent to setting the property flex-direction to row. The flex-direction property can have one of four values: row; row-reverse; column; and column-reverse. These enable you to display the items in a row, or reverse their order in a row; and similarly in a column, or a column with the order reversed. Example 2-3: Setting flex-direction nav ul{ display: flex; justify-content: space-between; flex-direction: row-reverse; }
 
 Equal height columns Another interesting aspect of flexbox is that it enables you to create equal height boxes, even if the content of some boxes is longer than others. The default value of the property align-items is stretch. This stretches each item in the group to the height of the tallest. You can see this in action in our navigation. I've added some text to one of the items making it taller than all of the others, but each item now grows to the height of the tallest item keeping the columns lined up neatly.
 
 The property align-items can also take the following values: • flex-start • flex-end • center • baseline • stretch To understand how these work you need to realise that flexbox has a concept of two axes: the main axis, along which items flow; and the cross-axis. By setting flex-
-....
+
+## Opdracht tegen uiterlijk volgende les! Je werkt hiervoor op codepen.io
+
+- Je maakt de volledige startpagina voor een muziekrecensiesite. Het genre en de branding kies je zelf. 
+- Je mag content herbruiken van een andere muzieksite
+- Je zorgt voor een mooie algemene stijl
+- Met bijzondere aandacht voor de proporties en de "grid"
+- Je zorgt dat de site responsive is
+- Je maakt gebruik van multi-column layout voor één of meerdere artikels centraal op de startpagina
+- Voor de navigatie gebruik je flexbox
+- Hoe meer je multi-column layout en flexbox gebruikt voor andere elementen op de site, hoe beter
